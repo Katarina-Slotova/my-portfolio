@@ -1,6 +1,6 @@
 import * as React from 'react'
-import { Link } from 'gatsby'
 import Layout from '../components/layout'
+import { StaticImage } from 'gatsby-plugin-image'
 
 /* const pageStyles = {
   color: '#232129',
@@ -130,7 +130,8 @@ const IndexPage = () => {
     <Layout pageTitle='Home page'>
       <p>Welcome to my portfolio website!</p>
       <p>I'm creating this website by following a Gatsby tutorial.</p>
-    </Layout>
+    <StaticImage src='../images/laptop.jpg' alt='Image of a phone and a laptop.' />
+		</Layout>
     /* <main style={pageStyles}>
       <h1 style={headingStyles}>
         Congratulations

@@ -5,7 +5,7 @@ import { container, heading, navLinks, navLinkItem, navLinkText } from './layout
 function Layout({ pageTitle, children }) {
   return (
     <div className={container}>
-      <nav >
+      <nav>
         <ul className={navLinks}>
           <li className={navLinkItem}>
             <Link to='/' className={navLinkText}>Home</Link>
