@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
-import Seo from '../../components/seo'
-import Layout from '../../components/layout'
+import Seo from '../../components/Seo'
+import Layout from '../../components/Layout'
 
 function ProjectPage({ data }) {
   return (
