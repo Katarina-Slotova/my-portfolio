@@ -2,6 +2,7 @@ import React from 'react'
 import { Link, graphql } from 'gatsby'
 import Seo from '../../components/Seo'
 import Layout from '../../components/Layout'
+import { projectTitle } from './projects.module.css'
 
 function ProjectPage({ data }) {
   return (
@@ -10,7 +11,10 @@ function ProjectPage({ data }) {
         <article key={project.id}>
           <h2>
             {' '}
-            <Link to={`/projects/${project.frontmatter.slug}`}>
+            <Link
+              className={projectTitle}
+              to={`/projects/${project.frontmatter.slug}`}
+            >
               {project.frontmatter.title}
             </Link>{' '}
           </h2>
