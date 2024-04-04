@@ -8,6 +8,7 @@ import {
   navLinkItem,
   navLinkText,
   navbar,
+  navbarWrapper,
   styleLogo,
 } from './layout.module.css'
 import Footer from '../Footer'
@@ -20,32 +21,33 @@ function Layout({ pageTitle, children }) {
     <div>
       {/* <header className={siteTitle}>{data.title}</header> */}
       <nav className={navbar}>
-
-        <ul className={navLinks}>
-        <li className={styleLogo}>
+        <Link to='/'>
           <StaticImage
+            className={styleLogo}
             src='../../images/ks.png'
-            layout='fixed'
             width={60}
             height={60}
           />
-        </li>
-          <li className={navLinkItem}>
-            <Link to='/' className={navLinkText}>
-              Home
-            </Link>
-          </li>
-          <li className={navLinkItem}>
-            <Link to='/about' className={navLinkText}>
-              About
-            </Link>
-          </li>
-          <li className={navLinkItem}>
-            <Link to='/projects' className={navLinkText}>
-              Projects
-            </Link>
-          </li>
-        </ul>
+        </Link>
+        <div className={navbarWrapper}>
+          <ul className={navLinks}>
+            <li className={navLinkItem}>
+              <Link to='/' className={navLinkText}>
+                Home
+              </Link>
+            </li>
+            <li className={navLinkItem}>
+              <Link to='/about' className={navLinkText}>
+                About
+              </Link>
+            </li>
+            <li className={navLinkItem}>
+              <Link to='/projects' className={navLinkText}>
+                Projects
+              </Link>
+            </li>
+          </ul>
+        </div>
       </nav>
       <main>
         <div className={container}>
