@@ -8,23 +8,31 @@ import {
   navLinks,
   navLinkItem,
   navLinkText,
+  navbarNotVisible,
 } from './navbar.module.css'
 
-function Navbar() {
+function Navbar({ showNavbar }) {
   return (
-    <nav className={navbar}>
-      <Link to='/#section1'>
+    <nav
+		className={navbar}
+      /* className={showNavbar ? navbar : navbarNotVisible} */
+      style={{ visibility: showNavbar ? 'visible' : 'hidden' }}
+    >
+      <Link to='/'>
         <StaticImage
           className={styleLogo}
-          src='../../images/ks.png'
-          width={60}
+          /* src='../../images/ks.png'
+          width={40}
+          height={55} */
+          src='../../images/ks1.png'
+          width={34}
           height={60}
         />
       </Link>
       <div className={navbarWrapper}>
         <ul className={navLinks}>
           <li className={navLinkItem}>
-            <Link to='/#section1' className={navLinkText}>
+            <Link to='/' className={navLinkText}>
               Home
             </Link>
           </li>

@@ -5,7 +5,7 @@ import Seo from '../Seo'
 
 function Projects({ data }) {
   return (
-    <div>
+    <div id='section3'>
       {data.allMdx.nodes.map((project) => (
         <article key={project.id}>
           <h2>

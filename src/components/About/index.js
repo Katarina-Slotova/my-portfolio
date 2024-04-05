@@ -3,7 +3,7 @@ import Seo from '../Seo';
 
 function AboutPage() {
   return (
-    <div>
+    <div id='section2'>
       <p>
         Hi there! I'm Katarina and I'm the proud creator of this site, which I
         built with Gatsby.

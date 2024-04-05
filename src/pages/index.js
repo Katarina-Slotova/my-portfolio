@@ -5,6 +5,8 @@ import Seo from '../components/Seo'
 import AboutPage from '../components/About'
 import Projects from '../components/Projects'
 import { graphql } from 'gatsby'
+import SectionLayout from '../components/SectionLayout'
+import Introduction from '../components/Introduction'
 
 /* const pageStyles = {
   color: '#232129',
@@ -131,23 +133,18 @@ const links = [
 
 const IndexPage = ({ data }) => {
   return (
-    <Layout pageTitle='Home Page'>
-      <div id='section1'>
-        <p>Welcome to my portfolio website!</p>
-        <p>I'm creating this website by following a Gatsby tutorial.</p>
-        <StaticImage
-          src='../images/laptop.jpg'
-          alt='Image of a phone and a laptop.'
-        />
-      </div>
+    <Layout>
+      <SectionLayout >
+        <Introduction />
+      </SectionLayout>
 
-      <div id='section2'>
+      <SectionLayout sectionTitle='About Me'>
         <AboutPage />
-      </div>
+      </SectionLayout>
 
-      <div id='section3'>
+      <SectionLayout sectionTitle='Projects'>
         <Projects data={data} />
-      </div>
+      </SectionLayout>
     </Layout>
   )
 }

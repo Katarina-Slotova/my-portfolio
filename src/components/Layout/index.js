@@ -1,64 +1,45 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import useSiteMetadata from '../../hooks/useSiteMetadata'
-import {
-  container,
-  heading,
-  navLinks,
-  navLinkItem,
-  navLinkText,
-  navbar,
-  navbarWrapper,
-  styleLogo,
-} from './layout.module.css'
+import { container, innerContent } from './layout.module.css'
 import Footer from '../Footer'
-import { StaticImage } from 'gatsby-plugin-image'
 import Navbar from '../Navbar'
 
-function Layout({ pageTitle, children }) {
-  const data = useSiteMetadata()
+function Layout({ children }) {
+  //const data = useSiteMetadata()
+  const [scrollY, setScrollY] = React.useState(0)
+  const [visible, setVisible] = React.useState(true)
+
+  React.useEffect(() => {
+    function handleScroll() {
+      let newScrollPos = window.scrollY
+
+      if (scrollY < newScrollPos && scrollY >= 40) {
+        setVisible(false)
+      } else if (scrollY > newScrollPos) {
+        setVisible(true)
+      }
+      setScrollY(newScrollPos)
+    }
+
+    window.addEventListener('scroll', handleScroll)
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [scrollY])
+
+  const showNavbar = visible
 
   return (
     <div>
-      {/* <header className={siteTitle}>{data.title}</header> */}
-      {/*       <nav className={navbar}>
-        <Link to='/'>
-          <StaticImage
-            className={styleLogo}
-            src='../../images/ks.png'
-            width={60}
-            height={60}
-          />
-        </Link>
-        <div className={navbarWrapper}>
-          <ul className={navLinks}>
-            <li className={navLinkItem}>
-              <Link to='/' className={navLinkText}>
-                Home
-              </Link>
-            </li>
-            <li className={navLinkItem}>
-              <Link to='/about' className={navLinkText}>
-                About
-              </Link>
-            </li>
-            <li className={navLinkItem}>
-              <Link to='/projects' className={navLinkText}>
-                Projects
-              </Link>
-            </li>
-          </ul>
-        </div>
-      </nav> */}
-      {/*       <main>
-        <ContentLayout pageTitle={pageTitle} children={children} />
-				<ContentLayout pageTitle={pageTitle} children={children} />
-      </main> */}
-      <Navbar />
       <main>
+        <Navbar showNavbar={showNavbar} />
         <div className={container}>
-          <h1 className={heading}>{pageTitle}</h1>
-          {children}
+          <div className={innerContent}>
+            {/* <h1 className={heading}>{pageTitle}</h1> */}
+            {children}
+          </div>
         </div>
       </main>
       <Footer />

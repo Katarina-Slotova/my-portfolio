@@ -1,9 +1,11 @@
 .navbar {
   width: 100%;
-  padding: 0.5vw 0;
+  padding: 0 20px;
+  max-width: 1062px;
+  padding: 0.5vw 1vw;
   position: fixed;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   z-index: 21;
   backdrop-filter: blur(15px);
 }
@@ -11,7 +13,6 @@
 .navbar-wrapper {
   margin: 0 auto;
   height: 100%;
-  max-width: 1000px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -20,7 +21,6 @@
 .nav-links {
   display: flex;
   list-style: none;
-  padding-left: 0;
 }
 
 @media (max-width: 500px) {
