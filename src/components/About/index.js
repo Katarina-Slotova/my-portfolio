@@ -1,10 +1,9 @@
-import React from 'react'
-import Layout from '../components/Layout'
-import Seo from '../components/Seo'
+import React from 'react';
+import Seo from '../Seo';
 
 function AboutPage() {
   return (
-    <Layout pageTitle='About Me'>
+    <div>
       <p>
         Hi there! I'm Katarina and I'm the proud creator of this site, which I
         built with Gatsby.
@@ -76,7 +75,7 @@ function AboutPage() {
         Hi there! I'm Katarina and I'm the proud creator of this site, which I
         built with Gatsby.
       </p>
-    </Layout>
+    </div>
   )
 }
 

@@ -13,6 +13,7 @@ import {
 } from './layout.module.css'
 import Footer from '../Footer'
 import { StaticImage } from 'gatsby-plugin-image'
+import Navbar from '../Navbar'
 
 function Layout({ pageTitle, children }) {
   const data = useSiteMetadata()
@@ -20,7 +21,7 @@ function Layout({ pageTitle, children }) {
   return (
     <div>
       {/* <header className={siteTitle}>{data.title}</header> */}
-      <nav className={navbar}>
+      {/*       <nav className={navbar}>
         <Link to='/'>
           <StaticImage
             className={styleLogo}
@@ -48,7 +49,12 @@ function Layout({ pageTitle, children }) {
             </li>
           </ul>
         </div>
-      </nav>
+      </nav> */}
+      {/*       <main>
+        <ContentLayout pageTitle={pageTitle} children={children} />
+				<ContentLayout pageTitle={pageTitle} children={children} />
+      </main> */}
+      <Navbar />
       <main>
         <div className={container}>
           <h1 className={heading}>{pageTitle}</h1>

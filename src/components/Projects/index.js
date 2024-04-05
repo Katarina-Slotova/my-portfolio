@@ -1,19 +1,18 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
-import Seo from '../../components/Seo'
-import Layout from '../../components/Layout'
 import { projectTitle } from './projects.module.css'
+import Seo from '../Seo'
 
-function ProjectPage({ data }) {
+function Projects({ data }) {
   return (
-    <Layout pageTitle='My Projects'>
+    <div>
       {data.allMdx.nodes.map((project) => (
         <article key={project.id}>
           <h2>
             {' '}
             <Link
               className={projectTitle}
-              to={`/projects/${project.frontmatter.slug}`}
+              to={`/${project.frontmatter.slug}`}
             >
               {project.frontmatter.title}
             </Link>{' '}
@@ -22,25 +21,10 @@ function ProjectPage({ data }) {
           <p>{project.excerpt}</p>
         </article>
       ))}
-    </Layout>
+    </div>
   )
 }
 
-export const projectsInfo = graphql`
-  query {
-    allMdx(sort: { frontmatter: { date: DESC } }) {
-      nodes {
-        frontmatter {
-          date(formatString: "MMMM D, YYYY")
-          title
-          slug
-        }
-        id
-        excerpt
-      }
-    }
-  }
-`
 export const Head = () => <Seo title='My Projects' />
 
-export default ProjectPage
+export default Projects
