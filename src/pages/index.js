@@ -7,6 +7,8 @@ import Projects from '../components/Projects'
 import { graphql } from 'gatsby'
 import SectionLayout from '../components/SectionLayout'
 import Introduction from '../components/Introduction'
+import Contact from '../components/Contact'
+import { App } from '../components/App'
 
 /* const pageStyles = {
   color: '#232129',
@@ -133,33 +135,45 @@ const links = [
 
 const IndexPage = ({ data }) => {
   return (
-    <Layout>
-      <SectionLayout >
-        <Introduction />
-      </SectionLayout>
+    <App>
+      <Layout>
+        <SectionLayout>
+          <Introduction />
+        </SectionLayout>
 
-      <SectionLayout sectionTitle='About Me'>
-        <AboutPage />
-      </SectionLayout>
+        <SectionLayout sectionTitle='About Me'>
+          <AboutPage />
+        </SectionLayout>
 
-      <SectionLayout sectionTitle='Projects'>
-        <Projects data={data} />
-      </SectionLayout>
-    </Layout>
+        <SectionLayout sectionTitle='Projects'>
+          <Projects data={data} />
+        </SectionLayout>
+
+        <SectionLayout sectionTitle='Contact'>
+          <Contact />
+        </SectionLayout>
+      </Layout>
+    </App>
   )
 }
 
 export const projectsInfo = graphql`
   query {
-    allMdx(sort: { frontmatter: { date: DESC } }) {
+    allMdx(sort: { frontmatter: { imageId: ASC } }) {
       nodes {
         frontmatter {
-          date(formatString: "MMMM D, YYYY")
           title
           slug
+          tags
+          hero_image {
+            childImageSharp {
+              gatsbyImageData
+            }
+          }
+          imageId
+          hero_image_alt
         }
         id
-        excerpt
       }
     }
   }

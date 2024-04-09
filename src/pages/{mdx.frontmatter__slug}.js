@@ -26,7 +26,6 @@ export const projectData = graphql`
   query ($id: String) {
     mdx(id: { eq: $id }) {
       frontmatter {
-        date(formatString: "MMMM D, YYYY")
         title
         hero_image_credit_text
         hero_image_credit_link

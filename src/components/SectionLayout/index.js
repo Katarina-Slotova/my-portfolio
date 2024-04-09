@@ -1,9 +1,9 @@
 import React from 'react'
-import {heading} from './sectionLayout.module.css'
+import { container, heading } from './sectionLayout.module.css'
 
 function SectionLayout({ sectionTitle, children }) {
   return (
-    <div>
+    <div className={container}>
       <h1 className={heading}>{sectionTitle}</h1>
       {children}
     </div>

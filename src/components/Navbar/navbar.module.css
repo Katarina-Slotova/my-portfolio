@@ -1,7 +1,6 @@
 .navbar {
   width: 100%;
-  padding: 0 20px;
-  max-width: 1062px;
+  max-width: 1070px;
   padding: 0.5vw 1vw;
   position: fixed;
   display: flex;
@@ -14,7 +13,7 @@
   margin: 0 auto;
   height: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 }
 

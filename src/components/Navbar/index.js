@@ -14,7 +14,7 @@ import {
 function Navbar({ showNavbar }) {
   return (
     <nav
-		className={navbar}
+      className={navbar}
       /* className={showNavbar ? navbar : navbarNotVisible} */
       style={{ visibility: showNavbar ? 'visible' : 'hidden' }}
     >
@@ -44,6 +44,11 @@ function Navbar({ showNavbar }) {
           <li className={navLinkItem}>
             <Link to='/#section3' className={navLinkText}>
               Projects
+            </Link>
+          </li>
+          <li className={navLinkItem}>
+            <Link to='/#section4' className={navLinkText}>
+              Contact
             </Link>
           </li>
         </ul>
