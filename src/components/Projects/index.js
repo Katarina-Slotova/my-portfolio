@@ -9,6 +9,7 @@ import {
   projectTag,
   projectTags,
   projectThumbnail,
+	redirectLink,
 } from './projects.module.css'
 import { motion } from 'framer-motion'
 
@@ -21,7 +22,7 @@ function Projects({ data }) {
   })
 
   return (
-    <div className={container} id='section3'>
+    <div className={container}>
       {data.allMdx.nodes.map((project) => (
         <motion.div
           className={card}
@@ -44,11 +45,13 @@ function Projects({ data }) {
               {project.frontmatter.title}
             </Link>{' '}
           </h2>
+          <p>{project.excerpt}</p>
           <div className={projectTags}>
             {project.frontmatter.tags.map((tag) => (
               <div className={projectTag}>{tag}</div>
             ))}
           </div>
+          <Link className={redirectLink} to={`/${project.frontmatter.slug}`}>Read more</Link>
         </motion.div>
       ))}
     </div>

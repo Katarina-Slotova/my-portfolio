@@ -5,7 +5,7 @@ import { container, innerContent } from './layout.module.css'
 import Footer from '../Footer'
 import Navbar from '../Navbar'
 
-function Layout({ children }) {
+function Layout({ isOnScreen, children }) {
   //const data = useSiteMetadata()
   const [scrollY, setScrollY] = React.useState(0)
   const [visible, setVisible] = React.useState(true)
@@ -34,7 +34,7 @@ function Layout({ children }) {
   return (
     <div>
       <main>
-        <Navbar showNavbar={showNavbar} />
+        <Navbar isOnScreen={isOnScreen} showNavbar={showNavbar} />
         <div className={container}>
           <div className={innerContent}>
             {/* <h1 className={heading}>{pageTitle}</h1> */}

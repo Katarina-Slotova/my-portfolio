@@ -8,14 +8,13 @@ import {
   navLinks,
   navLinkItem,
   navLinkText,
-  navbarNotVisible,
 } from './navbar.module.css'
 
-function Navbar({ showNavbar }) {
+function Navbar({ isOnScreen, showNavbar }) {
+	const [isFirstOnScreen, isSecondOnScreen, isThirdOnScreen, isFourthOnScreen] = isOnScreen
   return (
     <nav
       className={navbar}
-      /* className={showNavbar ? navbar : navbarNotVisible} */
       style={{ visibility: showNavbar ? 'visible' : 'hidden' }}
     >
       <Link to='/'>
@@ -32,22 +31,22 @@ function Navbar({ showNavbar }) {
       <div className={navbarWrapper}>
         <ul className={navLinks}>
           <li className={navLinkItem}>
-            <Link to='/' className={navLinkText}>
+            <Link to='/' className={navLinkText} style={{color: isFirstOnScreen ? '#db3056' : '#0802a3'}}>
               Home
             </Link>
           </li>
           <li className={navLinkItem}>
-            <Link to='/#section2' className={navLinkText}>
+            <Link to='/#section2' className={navLinkText} style={{color: isSecondOnScreen ? '#db3056' : '#0802a3'}}>
               About
             </Link>
           </li>
           <li className={navLinkItem}>
-            <Link to='/#section3' className={navLinkText}>
+            <Link to='/#section3' className={navLinkText} style={{color: isThirdOnScreen ? '#db3056' : '#0802a3'}}>
               Projects
             </Link>
           </li>
           <li className={navLinkItem}>
-            <Link to='/#section4' className={navLinkText}>
+            <Link to='/#section4' className={navLinkText} style={{color: isFourthOnScreen ? '#db3056' : '#0802a3'}}>
               Contact
             </Link>
           </li>

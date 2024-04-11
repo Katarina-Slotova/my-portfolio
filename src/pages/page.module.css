@@ -1,0 +1,14 @@
+.heading {
+  color: #0802a3;
+  font-family: 'Playfair Display';
+}
+
+.container {
+  margin: 15rem 0;
+}
+
+@media (max-width: 500px) {
+  .container {
+    margin: 5rem 0;
+  }
+}
