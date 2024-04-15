@@ -1,6 +1,4 @@
 import React from 'react'
-import { Link } from 'gatsby'
-import useSiteMetadata from '../../hooks/useSiteMetadata'
 import { container, innerContent } from './layout.module.css'
 import Footer from '../Footer'
 import Navbar from '../Navbar'

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link, graphql } from 'gatsby'
+import { Link } from 'gatsby'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import { projectTitle } from './projects.module.css'
 import Seo from '../Seo'
@@ -9,16 +9,18 @@ import {
   projectTag,
   projectTags,
   projectThumbnail,
-	redirectLink,
+  redirectLink,
+  arrow,
 } from './projects.module.css'
 import { motion } from 'framer-motion'
+import { FaArrowRight } from 'react-icons/fa'
 
 function Projects({ data }) {
   let imageArr = []
 
   data.allMdx.nodes.map((image) => {
     const processedImage = getImage(image.frontmatter.hero_image)
-    imageArr.push(processedImage)
+    return imageArr.push(processedImage)
   })
 
   return (
@@ -47,11 +49,22 @@ function Projects({ data }) {
           </h2>
           <p>{project.excerpt}</p>
           <div className={projectTags}>
-            {project.frontmatter.tags.map((tag) => (
-              <div className={projectTag}>{tag}</div>
+            {project.frontmatter.tags.map((tag, id) => (
+              <div className={projectTag} key={id}>
+                {tag}
+              </div>
             ))}
           </div>
-          <Link className={redirectLink} to={`/${project.frontmatter.slug}`}>Read more</Link>
+          <Link to={`/${project.frontmatter.slug}`}>
+            <motion.div
+              className={redirectLink}
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              transition={{ type: 'spring', stiffness: 400, damping: 17 }}
+            >
+              Read more <FaArrowRight className={arrow} />
+            </motion.div>
+          </Link>
         </motion.div>
       ))}
     </div>

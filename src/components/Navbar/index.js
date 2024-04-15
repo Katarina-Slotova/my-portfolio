@@ -11,7 +11,10 @@ import {
 } from './navbar.module.css'
 
 function Navbar({ isOnScreen, showNavbar }) {
-	const [isFirstOnScreen, isSecondOnScreen, isThirdOnScreen, isFourthOnScreen] = isOnScreen
+  if (!isOnScreen) {
+    isOnScreen = [false, false, false, false]
+  }
+
   return (
     <nav
       className={navbar}
@@ -26,27 +29,44 @@ function Navbar({ isOnScreen, showNavbar }) {
           src='../../images/ks1.png'
           width={34}
           height={60}
+          alt='website logo'
         />
       </Link>
       <div className={navbarWrapper}>
         <ul className={navLinks}>
           <li className={navLinkItem}>
-            <Link to='/' className={navLinkText} style={{color: isFirstOnScreen ? '#db3056' : '#0802a3'}}>
+            <Link
+              to='/'
+              className={navLinkText}
+              style={{ color: isOnScreen[0] ? '#db3056' : '#0802a3' }}
+            >
               Home
             </Link>
           </li>
           <li className={navLinkItem}>
-            <Link to='/#section2' className={navLinkText} style={{color: isSecondOnScreen ? '#db3056' : '#0802a3'}}>
+            <Link
+              to='/#about'
+              className={navLinkText}
+              style={{ color: isOnScreen[1] ? '#db3056' : '#0802a3' }}
+            >
               About
             </Link>
           </li>
           <li className={navLinkItem}>
-            <Link to='/#section3' className={navLinkText} style={{color: isThirdOnScreen ? '#db3056' : '#0802a3'}}>
+            <Link
+              to='/#projects'
+              className={navLinkText}
+              style={{ color: isOnScreen[2] ? '#db3056' : '#0802a3' }}
+            >
               Projects
             </Link>
           </li>
           <li className={navLinkItem}>
-            <Link to='/#section4' className={navLinkText} style={{color: isFourthOnScreen ? '#db3056' : '#0802a3'}}>
+            <Link
+              to='/#contact'
+              className={navLinkText}
+              style={{ color: isOnScreen[3] ? '#db3056' : '#0802a3' }}
+            >
               Contact
             </Link>
           </li>

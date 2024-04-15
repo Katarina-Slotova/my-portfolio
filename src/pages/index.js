@@ -1,6 +1,5 @@
 import * as React from 'react'
 import Layout from '../components/Layout'
-import { StaticImage } from 'gatsby-plugin-image'
 import Seo from '../components/Seo'
 import AboutPage from '../components/About'
 import Projects from '../components/Projects'
@@ -28,30 +27,37 @@ const IndexPage = ({ data }) => {
     isFourthOnScreen,
   ]
 
+/*    isOnScreen.map((section, id) => {
+    if (section && isOnScreen.indexOf(section) === id) {
+      const sectionId = id + 1
+      document.location.replace(`#section${sectionId}`)
+    }
+  })  */
+
   return (
     <App>
       <Layout isOnScreen={isOnScreen}>
         <div className={container}>
-          <h1 className={heading} ref={sectionOneRef}></h1>
+          <h1 className={heading} ref={sectionOneRef}>{}</h1>
           <Introduction />
         </div>
 
-        <div className={container}>
-          <h1 className={heading} ref={sectionTwoRef} id='section2'>
+        <div className={container} ref={sectionTwoRef} id='about'>
+          <h1 className={heading} >
             About Me
           </h1>
           <AboutPage />
         </div>
 
         <div className={container}>
-          <h1 className={heading} ref={sectionThreeRef} id='section3'>
+          <h1 className={heading} ref={sectionThreeRef} id='projects'>
             Projects
           </h1>
           <Projects data={data} />
         </div>
 
         <div className={container}>
-          <h1 className={heading} ref={sectionFourRef} id='section4'>
+          <h1 className={heading} ref={sectionFourRef} id='contact'>
             Contact
           </h1>
           <Contact />

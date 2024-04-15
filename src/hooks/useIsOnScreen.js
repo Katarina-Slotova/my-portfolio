@@ -1,26 +1,26 @@
-import React from 'react';
+import React from 'react'
 
 function useIsOnScreen(sectionRef) {
-  const [isVisible, setIsVisible] = React.useState(false);
+  const [isVisible, setIsVisible] = React.useState(false)
 
   React.useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
-      const [entry] = entries;
+      const [entry] = entries
 
-      setIsVisible(entry.isIntersecting);
+      setIsVisible(entry.isIntersecting)
 
       // `entry.isIntersecting` will be true if the
       // element is in the viewport, false if not.
-    });
+    })
 
-    observer.observe(sectionRef.current);
+    observer.observe(sectionRef.current)
 
     return () => {
-      observer.disconnect();
-    };
-  }, [sectionRef]);
+      observer.disconnect()
+    }
+  }, [sectionRef])
 
-  return isVisible;
+  return isVisible
 }
 
-export default useIsOnScreen;
+export default useIsOnScreen
