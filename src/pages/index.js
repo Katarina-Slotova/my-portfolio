@@ -27,7 +27,7 @@ const IndexPage = ({ data }) => {
     isFourthOnScreen,
   ]
 
-/*    isOnScreen.map((section, id) => {
+  /*    isOnScreen.map((section, id) => {
     if (section && isOnScreen.indexOf(section) === id) {
       const sectionId = id + 1
       document.location.replace(`#section${sectionId}`)
@@ -38,26 +38,29 @@ const IndexPage = ({ data }) => {
     <App>
       <Layout isOnScreen={isOnScreen}>
         <div className={container}>
-          <h1 className={heading} ref={sectionOneRef}>{}</h1>
+          <h1 ref={sectionOneRef}>{}</h1>
           <Introduction />
         </div>
 
-        <div className={container} ref={sectionTwoRef} id='about'>
-          <h1 className={heading} >
-            About Me
+        <div className={container} style={{ marginLeft: '2rem' }}>
+          <h1 ref={sectionTwoRef} id='about' style={{ margin: '0' }}>
+            ...
           </h1>
+          <h1 className={heading}>About Me</h1>
           <AboutPage />
         </div>
 
-        <div className={container}>
-          <h1 className={heading} ref={sectionThreeRef} id='projects'>
-            Projects
+        <div className={container} style={{ marginLeft: '2rem' }}>
+          <h1 ref={sectionThreeRef} id='projects' style={{ margin: '0' }}>
+            ...
           </h1>
+          <h1 className={heading}>Projects</h1>
           <Projects data={data} />
         </div>
 
-        <div className={container}>
-          <h1 className={heading} ref={sectionFourRef} id='contact'>
+        <div className={container} style={{ marginLeft: '2rem' }}>
+          <h1 style={{ margin: '0' }}>...</h1>
+          <h1 ref={sectionFourRef} id='contact' className={heading}>
             Contact
           </h1>
           <Contact />

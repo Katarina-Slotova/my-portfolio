@@ -33,7 +33,7 @@ function Projects({ data }) {
             scale: 1.1,
             boxShadow: '5px 5px 0 rgba(0, 0, 0, 0.1)',
           }}
-          transition={{ type: 'spring', stiffness: 400, damping: 18 }}
+          transition={{ type: 'spring', stiffness: 300, damping: 20 }}
         >
           <GatsbyImage
             className={projectThumbnail}
@@ -60,7 +60,7 @@ function Projects({ data }) {
               className={redirectLink}
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
-              transition={{ type: 'spring', stiffness: 400, damping: 17 }}
+              transition={{ type: 'spring', stiffness: 400, damping: 30 }}
             >
               Read more <FaArrowRight className={arrow} />
             </motion.div>

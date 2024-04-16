@@ -1,0 +1,128 @@
+.container {
+  width: 100%;
+  display: flex;
+  height: 700px;
+  background-color: #e8e8f3;
+  padding-top: 10px;
+}
+
+.column-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+
+.column-left {
+  display: flex;
+  justify-content: center;
+  flex: 1;
+}
+
+.profile-img {
+  scale: 0.7;
+  border-radius: 10px;
+  position: absolute;
+}
+
+.background-container {
+  background-color: rgb(204, 204, 218);
+	/* background-color: #dcb3bc; */
+  height: 620px;
+  width: 350px;
+  margin-left: 50px;
+  margin-bottom: 40px;
+  border-radius: 10px;
+}
+
+.large-circle {
+  display: flex;
+  justify-content: center;
+  width: 300px;
+  width: 300px;
+  height: 300px;
+	margin-left: 200px;
+  border-radius: 50%;
+  background: linear-gradient(
+    90deg,
+    rgba(232, 232, 243, 1) 0%,
+    rgba(202, 202, 219, 1) 50%
+  );
+}
+
+.middle-circle {
+  display: flex;
+  justify-content: center;
+  margin-top: 150px;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: linear-gradient(
+    90deg,
+    rgba(232, 232, 243, 1) 0%,
+    rgba(202, 202, 219, 1) 50%
+  );
+}
+
+.small-circle {
+  display: flex;
+  justify-content: center;
+  margin-top: 300px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: linear-gradient(
+    90deg,
+    rgba(232, 232, 243, 1) 0%,
+    rgba(202, 202, 219, 1) 50%
+  );
+  /* background-color: #e8e8f3; */
+}
+
+.intro-text {
+  font-family: 'Reenie Beanie';
+  font-size: 40px;
+  justify-content: center;
+  text-align: center;
+  margin: 90px 20px;
+}
+
+.about {
+  display: flex;
+  margin-top: 50px;
+  line-height: 25px;
+	margin-left: 30px;
+  padding-left: 20px;
+	border-radius: 10px;
+}
+
+.about-left {
+	flex: 1;
+  margin-right: 80px;
+}
+
+.about-right {
+  flex: 1;
+}
+
+@media (max-width: 500px) {
+  .container {
+    display: block;
+    width: 50vh;
+    height: 80vh;
+  }
+
+  .column-right {
+    flex: 0.4;
+  }
+
+  .profile-img {
+    scale: 0.5;
+  }
+
+  .background-container {
+    scale: 0.5;
+    margin-bottom: 20px;
+    margin-right: 60px;
+  }
+}

@@ -1,13 +1,21 @@
 .heading {
   color: #0802a3;
   font-family: 'Playfair Display';
+  font-size: 45px;
+  margin-top: 7rem;
+  margin-bottom: 50px;
 }
 
 .container {
-  margin: 15rem 0;
+  margin-bottom: 8rem;
 }
 
-@media (max-width: 500px) {
+.container h1 {
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width: 800px) {
   .container {
     margin: 5rem 0;
   }
