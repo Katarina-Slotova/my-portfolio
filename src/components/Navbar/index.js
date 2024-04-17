@@ -45,11 +45,11 @@ function Navbar({ isOnScreen, showNavbar }) {
           </li>
           <li className={navLinkItem}>
             <Link
-              to='/#about'
+              to='/#skills'
               className={navLinkText}
               style={{ color: isOnScreen[1] ? '#db3056' : '#0802a3' }}
             >
-              About
+              Skills
             </Link>
           </li>
           <li className={navLinkItem}>

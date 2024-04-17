@@ -8,11 +8,11 @@ body {
 }
 
 .inner-content {
-  padding: 2vh 0;
+  padding: 0.1vh 0;
 }
 
 .container {
-	max-width: 1500px;
+  max-width: 1500px;
   opacity: 0;
   animation: fade-in-right ease 0.5s forwards;
 }

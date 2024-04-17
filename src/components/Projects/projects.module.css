@@ -11,7 +11,8 @@
 
 .container {
   display: flex;
-  min-height: 30rem;
+  min-height: 29rem;
+  margin: 0 90px;
 }
 
 .card {
@@ -62,12 +63,24 @@
 .redirect-link:hover {
   color: #db3056;
   transition: all 0.1s;
-	text-decoration: underline;
+  text-decoration: underline;
 }
 
 .arrow {
   padding: 0 10px;
-	font-size: 12px;
+  font-size: 12px;
+}
+
+.github-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 6rem;
+}
+
+.github-link {
+  color: #0802a3;
+  font-size: 16px;
+  text-decoration: none;
 }
 
 @media (max-width: 800px) {

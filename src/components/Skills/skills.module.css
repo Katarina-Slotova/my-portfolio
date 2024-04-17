@@ -1,0 +1,12 @@
+.skills-layout {
+  display: flex;
+  justify-content: space-around;
+}
+
+/* .stack {
+	flex: 1;
+}
+
+.courses {
+  flex: 1;
+} */
