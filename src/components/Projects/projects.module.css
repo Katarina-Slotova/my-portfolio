@@ -83,6 +83,12 @@
   text-decoration: none;
 }
 
+.github-link:hover {
+  color: #db3056;
+  transition: all 0.1s;
+  text-decoration: underline;
+}
+
 @media (max-width: 800px) {
   .container {
     display: block;

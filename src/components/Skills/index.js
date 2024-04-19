@@ -1,20 +1,57 @@
 import React from 'react'
-import { skillsLayout, stack, courses } from './skills.module.css'
+import {
+  skillsLayout,
+  stack,
+  courses,
+  stackLogoContainer,
+  logoImg,
+  logoName,
+  stackLeft,
+  stackRight,
+} from './skills.module.css'
+import { skillsDataLeft, skillsDataRight } from './data.js'
 
 function Skills() {
   return (
     <div className={skillsLayout}>
       <div className={stack}>
-        <p>
-          Hi there! I'm Katarina and I'm the proud creator of this site, which I
-          built with Gatsby.
-        </p>
+        <div className={stackLeft}>
+          {skillsDataLeft.map(({ src, alt, name }) => {
+            console.log(src)
+            return (
+              <div className={stackLogoContainer}>
+                <img
+                  src={src}
+                  alt={alt}
+                  width={50}
+                  height={50}
+                  className={logoImg}
+                />
+                <p className={logoName}>{name}</p>
+              </div>
+            )
+          })}
+        </div>
+        <div className={stackRight}>
+          {skillsDataRight.map(({ src, alt, name }) => {
+            console.log(src)
+            return (
+              <div className={stackLogoContainer}>
+                <img
+                  src={src}
+                  alt={alt}
+                  width={50}
+                  height={50}
+                  className={logoImg}
+                />
+                <p className={logoName}>{name}</p>
+              </div>
+            )
+          })}
+        </div>
       </div>
       <div className={courses}>
-        <p>
-          Hi there! I'm Katarina and I'm the proud creator of this site, which I
-          built with Gatsby.
-        </p>
+        <p>Other Courses</p>
       </div>
     </div>
   )

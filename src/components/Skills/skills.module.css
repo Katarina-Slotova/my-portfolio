@@ -3,10 +3,36 @@
   justify-content: space-around;
 }
 
-/* .stack {
-	flex: 1;
+.stack {
+  display: flex;
+  justify-content: space-between;
+  flex: 1;
+  padding: 0 20px;
+}
+
+.stack-left {
+	flex: 1
+}
+
+.stack-right {
+	flex: 1
 }
 
 .courses {
   flex: 1;
-} */
+  padding: 0 20px;
+}
+
+.stack-logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo-img {
+  margin-right: 20px;
+}
+
+.logo-name {
+  border-bottom: solid;
+  width: 200px;
+}

@@ -33,7 +33,7 @@ module.exports = {
         display: 'swap',
       },
     },
-		{
+    {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `GatsbyJS`,
@@ -42,7 +42,7 @@ module.exports = {
         background_color: `#f7f0eb`,
         theme_color: `#a2466c`,
         display: `standalone`,
-				icon: `src/images/browserImg.png`,
+        icon: `src/images/browserImg.png`,
       },
     },
   ],
