@@ -78,6 +78,7 @@ export const projectsInfo = graphql`
           title
           slug
           tags
+          description
           hero_image {
             childImageSharp {
               gatsbyImageData
@@ -86,7 +87,6 @@ export const projectsInfo = graphql`
           imageId
           hero_image_alt
         }
-        excerpt
         id
       }
     }

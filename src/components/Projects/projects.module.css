@@ -11,7 +11,7 @@
 
 .container {
   display: flex;
-  min-height: 29rem;
+  min-height: 35rem;
   margin: 0 90px;
 }
 
@@ -38,7 +38,7 @@
   color: white;
   width: fit-content;
   height: fit-content;
-  border-radius: 40%;
+  border-radius: 50px;
   padding: 5px;
   align-items: center;
   margin: 2px;
@@ -47,6 +47,9 @@
 .project-thumbnail {
   border-radius: 10px;
   margin-top: 10px;
+  display: flex;
+  justify-content: center;
+	min-height: 200px;
 }
 
 .redirect-link {
@@ -87,6 +90,12 @@
   color: #db3056;
   transition: all 0.1s;
   text-decoration: underline;
+}
+
+.description {
+  text-align: justify;
+  font-size: 16px;
+  line-height: 20px;
 }
 
 @media (max-width: 800px) {

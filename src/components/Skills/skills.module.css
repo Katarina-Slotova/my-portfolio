@@ -1,31 +1,34 @@
 .skills-layout {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .stack {
   display: flex;
   justify-content: space-between;
   flex: 1;
-  padding: 0 20px;
+  padding-right: 20px;
 }
 
 .stack-left {
-	flex: 1
+  flex: 1;
 }
 
 .stack-right {
-	flex: 1
+  flex: 1;
 }
 
 .courses {
   flex: 1;
-  padding: 0 20px;
+  padding-left:20px;
+  line-height: 30px;
+  text-align: justify;
 }
 
 .stack-logo-container {
   display: flex;
   align-items: center;
+  padding: 15px;
 }
 
 .logo-img {
@@ -35,4 +38,28 @@
 .logo-name {
   border-bottom: solid;
   width: 200px;
+}
+
+.redirect-link {
+  font-weight: 400;
+  color: #0802a3;
+  text-decoration: none;
+}
+
+.redirect-link:hover {
+  color: #db3056;
+  transition: all 0.1s;
+  text-decoration: underline;
+}
+
+.small-heading {
+  color: #0802a3;
+}
+
+.courses-subsection {
+  display: block;
+}
+
+.subsection {
+	margin-bottom: 100px;
 }

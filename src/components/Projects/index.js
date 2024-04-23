@@ -13,6 +13,7 @@ import {
   arrow,
   githubLink,
   githubContainer,
+  description,
 } from './projects.module.css'
 import { motion } from 'framer-motion'
 import { FaArrowRight } from 'react-icons/fa'
@@ -53,7 +54,7 @@ function Projects({ data }) {
                 {project.frontmatter.title}
               </Link>{' '}
             </h2>
-            <p>{project.excerpt}</p>
+            <p className={description}>{project.frontmatter.description}</p>
             <div className={projectTags}>
               {project.frontmatter.tags.map((tag, id) => (
                 <div className={projectTag} key={id}>
