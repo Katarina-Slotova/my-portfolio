@@ -61,7 +61,7 @@ const IndexPage = ({ data }) => {
         <div className={container} style={{ marginLeft: '2rem' }}>
           <h1 style={{ margin: '0' }}>...</h1>
           <h1 ref={sectionFourRef} id='contact' className={heading}>
-            Contact
+            Let's get in touch!
           </h1>
           <Contact />
         </div>

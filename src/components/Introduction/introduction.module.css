@@ -16,6 +16,7 @@
 
 .column-left {
   display: flex;
+
   justify-content: center;
   flex: 1;
 }

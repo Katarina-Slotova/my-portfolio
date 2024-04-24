@@ -1,0 +1,21 @@
+.wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.form-container {
+  /*   display: flex;
+  flex-direction: column;
+	justify-content: center;
+	max-width: fit-content; */
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+}
+
+input, textarea, button {
+  display: block;
+  margin-bottom: 16px;
+  padding: 4px 8px;
+	line-height: 25px;
+}
