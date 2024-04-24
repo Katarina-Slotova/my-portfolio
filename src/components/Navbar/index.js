@@ -38,7 +38,7 @@ function Navbar({ isOnScreen, showNavbar }) {
             <Link
               to='/'
               className={navLinkText}
-              style={{ color: isOnScreen[0] ? '#db3056' : '#0802a3' }}
+              style={{ color: isOnScreen[0] ? '#db3056' : 'hsl(240deg 60% 25%)' }}
             >
               Home
             </Link>
@@ -47,7 +47,7 @@ function Navbar({ isOnScreen, showNavbar }) {
             <Link
               to='/#skills'
               className={navLinkText}
-              style={{ color: isOnScreen[1] ? '#db3056' : '#0802a3' }}
+              style={{ color: isOnScreen[1] ? '#db3056' : 'hsl(240deg 60% 25%)' }}
             >
               Skills
             </Link>
@@ -56,7 +56,7 @@ function Navbar({ isOnScreen, showNavbar }) {
             <Link
               to='/#projects'
               className={navLinkText}
-              style={{ color: isOnScreen[2] ? '#db3056' : '#0802a3' }}
+              style={{ color: isOnScreen[2] ? '#db3056' : 'hsl(240deg 60% 25%)' }}
             >
               Projects
             </Link>
@@ -65,7 +65,7 @@ function Navbar({ isOnScreen, showNavbar }) {
             <Link
               to='/#contact'
               className={navLinkText}
-              style={{ color: isOnScreen[3] ? '#db3056' : '#0802a3' }}
+              style={{ color: isOnScreen[3] ? '#db3056' : 'hsl(240deg 60% 25%)' }}
             >
               Contact
             </Link>

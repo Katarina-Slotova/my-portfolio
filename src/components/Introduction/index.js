@@ -48,8 +48,9 @@ function Introduction() {
           <div className={aboutLeft}>
             <p className={introAboutMe}>
               My journey into software began at Hive Helsinki, where{' '}
-              <strong>collaboration</strong> and <strong>peer-learning </strong>
-              through hands-on projects are at the core of the pedagogy.
+              <strong>collaboration</strong> and{' '}
+              <strong>peer-to-peer project-based learning </strong>
+              are at the core of the pedagogy.
             </p>
             <p className={introAboutMe}>
               I'm a self-motivated learner, who's tackled solo projects and

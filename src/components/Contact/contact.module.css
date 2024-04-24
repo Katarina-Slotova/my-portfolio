@@ -1,21 +1,60 @@
-.wrapper {
+.container {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
 }
 
 .form-container {
-  /*   display: flex;
-  flex-direction: column;
-	justify-content: center;
-	max-width: fit-content; */
+  display: flex;
+  justify-content: center;
+  width: 50%;
+}
+
+.text-container {
+  display: block;
+  width: 50%;
+  line-height: 30px;
+}
+
+.text-subsection {
+  display: flex;
+}
+
+.text-paragraph {
+	margin: 0;
+	padding-bottom: 30px;
+	padding-right: 15px;
+}
+
+.wrapper {
   display: flex;
   flex-direction: column;
   width: 400px;
 }
 
-input, textarea, button {
+input,
+textarea,
+button {
+  font-family: 'League Spartan';
+  font-size: 16px;
   display: block;
   margin-bottom: 16px;
   padding: 4px 8px;
-	line-height: 25px;
+  line-height: 30px;
+  border-radius: 6px;
+  border: 1px solid rgb(162, 162, 162);
+}
+
+.submit-button {
+  /* color: #0802a3; */
+  /* background-color: #e8e8f3; */
+  /* border: 1px solid hsl(240deg 30% 80%); */
+  background: hsl(240deg 60% 25%);
+  border: none;
+  color: white;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.submit-button:hover {
+  background: #db3056;
 }
