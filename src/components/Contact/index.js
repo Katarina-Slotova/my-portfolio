@@ -7,8 +7,12 @@ import {
   submitButton,
   textSubsection,
   textParagraph,
+  connectImg,
+  connectBtn,
 } from './contact.module.css'
 import { motion } from 'framer-motion'
+import GithubImg from '../../images/github.png'
+import LinkedInImg from '../../images/linkedin.png'
 
 function Contact() {
   return (
@@ -36,6 +40,28 @@ function Contact() {
                 Feel free to reach out on LinkedIn or via the contact form — I'd
                 love to connect and see how we can support each other's journey.
               </p>
+            </div>
+          </div>
+          <div className={textSubsection}>
+            <div className={connectImg}>
+              <a
+                className={connectBtn}
+                href='https://www.linkedin.com/in/katarina-slotova-804466131/'
+                target='_blank'
+                rel='noreferrer'
+              >
+                <img src={LinkedInImg} width={50} height={50} alt='Linkedin logo.' />
+              </a>
+            </div>
+            <div className={connectImg}>
+              <a
+                className={connectBtn}
+                href='https://github.com/Katarina-Slotova'
+                target='_blank'
+                rel='noreferrer'
+              >
+                <img src={GithubImg} width={50} height={50} alt='Github logo.' />
+              </a>
             </div>
           </div>
         </div>

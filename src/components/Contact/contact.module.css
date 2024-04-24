@@ -20,9 +20,21 @@
 }
 
 .text-paragraph {
-	margin: 0;
-	padding-bottom: 30px;
-	padding-right: 15px;
+  margin: 0;
+  padding-bottom: 30px;
+  padding-right: 15px;
+}
+
+.connect-img {
+  display: flex;
+  justify-content: center;
+	padding: 40px 0;
+  width: 100%;
+  height: 100%;
+}
+
+.connect-btn {
+	cursor: pointer;
 }
 
 .wrapper {
