@@ -2,12 +2,15 @@
   color: hsl(240deg 60% 25%);
   font-family: 'Playfair Display';
   font-size: 45px;
-  margin-top: 6rem;
-  margin-bottom: 4rem;
+  margin-top: 4rem;
+  margin-bottom: 5rem;
 }
 
 .container {
-  margin-bottom: 10rem;
+  padding-bottom: 7rem;
+	padding-top: 2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
 .container h1 {
@@ -15,8 +18,34 @@
   justify-content: center;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1024px) {
   .container {
-    margin: 5rem 0;
+    padding: 0;
+  }
+
+  .container h1 {
+    padding: 0;
+  }
+
+  .heading {
+    font-size: 35px;
+    margin: 3rem 0;
+    padding: 0;
+  }
+}
+
+@media (max-width: 700px) {
+  .container {
+    padding: 0;
+  }
+
+  .container h1 {
+    padding: 0;
+  }
+
+  .heading {
+    font-size: 35px;
+    margin: 3rem 0;
+    padding: 0;
   }
 }

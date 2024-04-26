@@ -3,7 +3,6 @@ import { wrapper, attribution } from './footer.module.css'
 
 function Footer() {
   return (
-    
       <div className={wrapper}>
         <p className={attribution}>
           © {new Date().getFullYear()} &middot; Built by Katarina, with{' '}

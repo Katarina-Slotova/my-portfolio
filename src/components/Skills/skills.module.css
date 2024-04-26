@@ -20,7 +20,7 @@
 
 .courses {
   flex: 1;
-  padding-left:20px;
+  padding-right: 20px;
   line-height: 30px;
   text-align: justify;
 }
@@ -61,5 +61,45 @@
 }
 
 .subsection {
-	margin-bottom: 100px;
+  margin-bottom: 100px;
+}
+
+@media (max-width: 1024px) {
+  .skills-layout {
+    display: block;
+  }
+
+  .stack {
+    display: flex;
+    padding-right: 0;
+    padding: 0 20px;
+  }
+
+  .courses {
+    padding: 10px 30px;
+  }
+
+  .subsection {
+    margin-bottom: 50px;
+  }
+}
+
+@media (max-width: 700px) {
+  .skills-layout {
+    display: block;
+  }
+
+  .stack {
+    display: block;
+    padding-right: 0;
+    padding: 0 20px;
+  }
+
+  .courses {
+    padding: 10px 30px;
+  }
+
+  .subsection {
+    margin-bottom: 50px;
+  }
 }

@@ -5,7 +5,7 @@
   position: fixed;
   display: flex;
   justify-content: space-between;
-	align-items: center;
+  align-items: center;
   z-index: 21;
   backdrop-filter: blur(15px);
 }
@@ -24,13 +24,7 @@
 }
 
 .style-logo {
-	margin-left: 2rem;
-}
-
-@media (max-width: 500px) {
-  .style-logo {
-    display: none;
-  }
+  margin-left: 2rem;
 }
 
 .nav-link-item {
@@ -46,4 +40,19 @@
 .nav-link-text:hover {
   color: #db3056;
   transition: all 0.4s;
+}
+
+@media (max-width: 1024px) {
+  .navbar-wrapper {
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 700px) {
+  .navbar-wrapper {
+    margin: 0 auto;
+  }
+  .style-logo {
+    display: none;
+  }
 }

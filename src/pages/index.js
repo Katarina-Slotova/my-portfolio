@@ -37,29 +37,35 @@ const IndexPage = ({ data }) => {
   return (
     <App>
       <Layout isOnScreen={isOnScreen}>
-        <div className={container}>
+        <div className={container} style={{ backgroundColor: '#e8e8f3' }}>
           <h1 ref={sectionOneRef}>{}</h1>
           <Introduction />
         </div>
 
-        <div className={container} style={{ marginLeft: '2rem' }}>
+        <div className={container}>
           <h1 ref={sectionTwoRef} id='skills' style={{ margin: '0' }}>
-            ...
+            {}
           </h1>
           <h1 className={heading}>Skills & Experiences</h1>
           <Skills />
         </div>
 
-        <div className={container} style={{ marginLeft: '2rem' }}>
+        <div className={container}>
           <h1 ref={sectionThreeRef} id='projects' style={{ margin: '0' }}>
-            ...
+            {}
           </h1>
           <h1 className={heading}>Selected Projects</h1>
           <Projects data={data} />
         </div>
 
-        <div className={container} style={{ marginLeft: '2rem' }}>
-          <h1 style={{ margin: '0' }}>...</h1>
+        <div
+          className={container}
+          style={{
+            backgroundColor: '#e8e8f3',
+            /* marginBottom: '0', */
+          }}
+        >
+          <h1 style={{ margin: '0' }}>{}</h1>
           <h1 ref={sectionFourRef} id='contact' className={heading}>
             Let's get in touch!
           </h1>
