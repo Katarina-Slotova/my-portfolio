@@ -9,6 +9,9 @@ import {
   textParagraph,
   connectImg,
   connectBtn,
+  emailLink,
+  emailBtn,
+  connectSubsection,
 } from './contact.module.css'
 import { motion } from 'framer-motion'
 import GithubImg from '../../images/github.png'
@@ -37,12 +40,13 @@ function Contact() {
             </div>
             <div>
               <p className={textParagraph}>
-                Feel free to reach out on LinkedIn or via the contact form — I'd
-                love to connect and see how we can support each other's journey.
+                Feel free to reach out on LinkedIn, via email or use the contact
+                form — I'd love to connect and see how we can support each
+                other's journey.
               </p>
             </div>
           </div>
-          <div className={textSubsection}>
+          <div className={connectSubsection}>
             <div className={connectImg}>
               <a
                 className={connectBtn}
@@ -50,7 +54,12 @@ function Contact() {
                 target='_blank'
                 rel='noreferrer'
               >
-                <img src={LinkedInImg} width={50} height={50} alt='Linkedin logo.' />
+                <img
+                  src={LinkedInImg}
+                  width={50}
+                  height={50}
+                  alt='Linkedin logo.'
+                />
               </a>
             </div>
             <div className={connectImg}>
@@ -60,8 +69,23 @@ function Contact() {
                 target='_blank'
                 rel='noreferrer'
               >
-                <img src={GithubImg} width={50} height={50} alt='Github logo.' />
+                <img
+                  src={GithubImg}
+                  width={50}
+                  height={50}
+                  alt='Github logo.'
+                />
               </a>
+            </div>
+            <div className={connectImg}>
+              <button className={emailBtn}>
+                <a
+                  className={emailLink}
+                  href='mailto:katarina.slotova@gmail.com'
+                >
+                  katarina.slotova@gmail.com
+                </a>
+              </button>
             </div>
           </div>
         </div>

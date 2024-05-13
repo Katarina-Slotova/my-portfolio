@@ -19,6 +19,10 @@
   display: flex;
 }
 
+.connect-subsection {
+  display: flex;
+}
+
 .text-paragraph {
   margin: 0;
   padding-bottom: 30px;
@@ -36,6 +40,26 @@
 
 .connect-btn {
   cursor: pointer;
+}
+
+.email-link {
+  text-decoration: none;
+  color: white;
+}
+
+.email-btn {
+  font-family: 'League Spartan';
+  font-size: 16px;
+  padding: 4px 8px;
+  border-radius: 6px;
+  background: hsl(240deg 60% 25%);
+  border: none;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.email-btn:hover {
+  background: #db3056;
 }
 
 .wrapper {
@@ -73,23 +97,43 @@ button {
 }
 
 @media (max-width: 1024px) {
-	.container {
-		display: block;
-	}
+  .container {
+    display: block;
+  }
 
-	.wrapper {
-		width: 90%;
-	}
+  .wrapper {
+    width: 90%;
+  }
+
+  .text-paragraph,
+  input,
+  textarea,
+  button {
+    font-size: 22px;
+  }
 }
 
 @media (max-width: 700px) {
-	.container {
-		display: block;
-	}
+  .container {
+    display: block;
+  }
 
-	.wrapper {
-		width: 90%;
-	}
+  .wrapper {
+    width: 90%;
+  }
+
+  .text-paragraph,
+  input,
+  textarea,
+  button {
+    font-size: 18px;
+  }
+
+  .connect-subsection {
+    display: block;
+  }
+
+  .connect-img {
+    padding: 20px 0;
+  }
 }
-
-

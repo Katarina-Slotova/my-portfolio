@@ -73,6 +73,7 @@
     display: flex;
     padding-right: 0;
     padding: 0 20px;
+    font-size: 22px;
   }
 
   .courses {
@@ -81,6 +82,7 @@
 
   .subsection {
     margin-bottom: 50px;
+    font-size: 22px;
   }
 }
 
@@ -93,6 +95,7 @@
     display: block;
     padding-right: 0;
     padding: 0 20px;
+    font-size: 18px;
   }
 
   .courses {
@@ -101,5 +104,6 @@
 
   .subsection {
     margin-bottom: 50px;
+    font-size: 18px;
   }
 }
