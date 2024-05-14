@@ -39,27 +39,29 @@
 }
 
 .connect-btn {
-  cursor: pointer;
+	cursor: pointer;
 }
 
 .email-link {
   text-decoration: none;
-  color: white;
+  color: hsl(240deg 60% 25%);
 }
 
 .email-btn {
   font-family: 'League Spartan';
+  font-weight: 500;
   font-size: 16px;
   padding: 4px 8px;
+	background-color: white;
   border-radius: 6px;
-  background: hsl(240deg 60% 25%);
-  border: none;
+  border: solid 2px;
+  border-color: hsl(240deg 60% 25%);
   cursor: pointer;
   transition: 0.4s;
 }
 
 .email-btn:hover {
-  background: #db3056;
+  background: #f1ccd4;
 }
 
 .wrapper {
