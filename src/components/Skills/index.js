@@ -21,7 +21,6 @@ function Skills() {
       <div className={stack}>
         <div className={stackLeft}>
           {skillsDataLeft.map(({ src, alt, name }) => {
-            console.log(src)
             return (
               <div className={stackLogoContainer}>
                 <img
@@ -38,7 +37,6 @@ function Skills() {
         </div>
         <div className={stackRight}>
           {skillsDataRight.map(({ src, alt, name }) => {
-            console.log(src)
             return (
               <div className={stackLogoContainer}>
                 <img
@@ -130,12 +128,5 @@ function Skills() {
     </div>
   )
 }
-
-/* export const Head = () => (
-  <>
-    <Seo title='Skills' />
-    <meta name='description' content='A portfolio section about my skills.' />
-  </>
-) */
 
 export default Skills

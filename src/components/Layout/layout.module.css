@@ -4,8 +4,6 @@ body {
   color: rgb(63, 63, 63);
   font-weight: 300;
   font-size: 18px;
-  display: flex;
-  justify-content: center;
 }
 
 .inner-content {
