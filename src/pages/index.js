@@ -8,7 +8,7 @@ import Introduction from '../components/Introduction'
 import Contact from '../components/Contact'
 import { App } from '../components/App'
 import useIsOnScreen from '../hooks/useIsOnScreen'
-import { heading, container } from './project.module.css'
+import { heading, container } from './page.module.css'
 
 const IndexPage = ({ data }) => {
   const sectionOneRef = React.useRef()

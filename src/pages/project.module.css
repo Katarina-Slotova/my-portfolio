@@ -20,16 +20,37 @@
   padding-left: 20px;
 }
 
-.about-container {
-  width: 50%;
+.two-column-wrapper {
+  display: flex;
+  justify-content: space-between;
 }
 
-.about {
+.about-container {
+  flex: 1;
+}
+
+.additional-info-container {
+  display: flex;
+  justify-content: space-evenly;
+  flex: 1;
+}
+
+.tags {
+  list-style: none;
+  padding: 0;
+}
+
+.about,
+.additional-info-container {
   margin-top: 20px;
   line-height: 30px;
   margin-left: 30px;
   padding-left: 20px;
-  border-radius: 10px;
+}
+
+.arrow {
+  padding: 0 5px;
+  font-size: 12px;
 }
 
 .subject-link {
