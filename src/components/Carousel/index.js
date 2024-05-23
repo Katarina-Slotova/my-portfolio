@@ -9,53 +9,111 @@ import {
   dot,
   active,
 } from './carousel.module.css'
-import { FaArrowLeft } from 'react-icons/fa'
-import { FaArrowRight } from 'react-icons/fa'
+import { IoIosArrowBack } from 'react-icons/io'
+import { IoIosArrowForward } from 'react-icons/io'
 
 function Carousel({ images }) {
   const [currentIndex, setCurrentIndex] = useState(0)
+  const [direction, setDirection] = useState('right')
+
+  const slideVariants = {
+    hiddenRight: {
+      x: '100%',
+      opacity: 0,
+    },
+    hiddenLeft: {
+      x: '-100%',
+      opacity: 0,
+    },
+    visible: {
+      x: '0',
+      opacity: 1,
+      transition: {
+        duration: 1,
+      },
+    },
+    exit: {
+      opacity: 0,
+      scale: 0.8,
+      transition: {
+        duration: 0.5,
+      },
+    },
+    hover: {
+      backgroundColor: '#db3056',
+      scale: 1.2,
+    },
+  }
+
+  const dotVariants = {
+    initial: {
+      y: '0',
+    },
+    animate: {
+      scale: 1.3,
+      y: '-10',
+      transition: { type: 'spring', stiffness: 1000, damping: 10 },
+    },
+    hover: {
+      scale: 1.1,
+      transition: { duration: 0.3 },
+    },
+  }
 
   function handleNext() {
+    setDirection('right')
     setCurrentIndex((prevIndex) =>
       prevIndex + 1 === images.length ? 0 : prevIndex + 1
     )
   }
 
   function handlePrevious() {
+    setDirection('left')
     setCurrentIndex((prevIndex) =>
       prevIndex - 1 < 0 ? images.length - 1 : prevIndex - 1
     )
   }
 
   function handleDot(index) {
+    setDirection(currentIndex > index ? 'left' : 'right')
     setCurrentIndex(index)
   }
 
   return (
     <div>
       <div className={carousel}>
-        <img
-          key={currentIndex}
-          src={images[currentIndex].src}
-          alt={images[currentIndex].alt}
-        ></img>
+        <AnimatePresence>
+          <motion.img
+            key={currentIndex}
+            src={images[currentIndex].src}
+            alt={images[currentIndex].alt}
+            variants={slideVariants}
+            initial={direction === 'left' ? 'hiddenLeft' : 'hiddenRight'}
+            animate='visible'
+            exit='exit'
+          />
+        </AnimatePresence>
         <div className={slideDirection}>
           <button className={left} onClick={handlePrevious}>
-            <FaArrowLeft />
+            <IoIosArrowBack />
           </button>
           <button className={right} onClick={handleNext}>
-            <FaArrowRight />
+            <IoIosArrowForward />
           </button>
         </div>
       </div>
       <div className={indicator}>
         {images.map((_, index) => {
           return (
-            <button
+            <motion.button
               key={index}
               className={`${dot} ${currentIndex === index ? active : ''}`}
               onClick={() => handleDot(index)}
-            ></button>
+              variants={dotVariants}
+              initial='initial'
+              animate={currentIndex === index ? 'animate' : ''}
+              hover='hover'
+            ></motion.button>
           )
         })}
       </div>

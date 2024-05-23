@@ -24,20 +24,23 @@
 .left,
 .right {
   background-color: hsl(240deg 60% 25%);
-  color: #fff;
-  padding: 3px;
+  color: white;
+  padding: 1px;
   border-radius: 50%;
   position: absolute;
   top: 0;
   bottom: 0;
-  margin: auto 10px;
-  height: 30px;
-  width: 30px;
+  margin: auto 5px;
+  height: 26px;
+  width: 26px;
+  opacity: 0.6;
+  cursor: pointer;
 }
 
 .left:hover,
 .right:hover {
   background-color: #db3056;
+  opacity: 1;
 }
 
 .left {
@@ -56,12 +59,13 @@
 }
 
 .dot {
-  background-color: rgb(63, 63, 63);
+  background-color: hsl(240, 4%, 53%);
   width: 15px;
   height: 15px;
   border-radius: 50%;
+  cursor: pointer;
 }
 
 .active {
-  background-color: #db3056;
+  background-color: hsl(240deg 60% 25%);
 }
