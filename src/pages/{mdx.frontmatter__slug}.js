@@ -6,8 +6,8 @@ import Carousel from '../components/Carousel'
 import { graphql } from 'gatsby'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import {
-  container,
-  heading,
+  projectContainer,
+  projectHeading,
   subheading,
   about,
   subContainerLeft,
@@ -21,7 +21,7 @@ import {
   stackLogoContainer,
   logoImg,
   logoName,
-} from './project.module.css'
+} from './page.module.css'
 import { intro, purpose, stack, images, problems } from '../data/data.js'
 import { FaArrowRight } from 'react-icons/fa'
 
@@ -32,8 +32,8 @@ function Project({ data, children }) {
   return (
     <App>
       <Layout pageTitle={data.mdx.frontmatter.title}>
-        <div className={container}>
-          <h1 className={heading}>
+        <div className={projectContainer}>
+          <h1 className={projectHeading}>
             {data.mdx.frontmatter.title}&nbsp;&nbsp;
             {intro[data.mdx.frontmatter.imageId].emoji}
           </h1>
@@ -102,13 +102,7 @@ function Project({ data, children }) {
               </p>
             </div>
           </div>
-          <h2
-            className={subheading}
-            style={{ display: 'flex', justifyContent: 'flex-end' }}
-          >
-            Web Stack & Constraints
-          </h2>
-          <div className={twoColumnWrapper}>
+          <div className={twoColumnWrapper} style={{marginTop: '7rem'}}>
             <div className={subContainerLeft}>
               {stack[data.mdx.frontmatter.imageId].stackImgs.map(
                 ({ src, alt, name }) => {
@@ -128,6 +122,9 @@ function Project({ data, children }) {
               )}
             </div>
             <div className={subContainerRight}>
+              <h2 className={subheading} style={{paddingLeft: '0', marginTop: '0'}}>
+                Web Stack & Constraints
+              </h2>
               <p className={about} style={{ paddingLeft: '0' }}>
                 {stack[data.mdx.frontmatter.imageId].constraints}
               </p>

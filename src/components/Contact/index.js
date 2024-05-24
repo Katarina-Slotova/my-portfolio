@@ -3,6 +3,7 @@ import {
   container,
   formContainer,
   textContainer,
+	textWrapper,
   wrapper,
   submitButton,
   textSubsection,
@@ -21,7 +22,7 @@ function Contact() {
   return (
     <div className={container}>
       <div className={textContainer}>
-        <div style={{ display: 'block' }}>
+        <div className={textWrapper}>
           <div className={textSubsection}>
             <div>
               <p className={textParagraph}>👋</p>

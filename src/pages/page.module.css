@@ -1,4 +1,4 @@
-.heading {
+.section-heading {
   color: hsl(240deg 60% 25%);
   font-family: 'Playfair Display';
   font-size: 45px;
@@ -18,6 +18,124 @@
   justify-content: center;
 }
 
+.narrow-container h1 {
+  display: flex;
+  justify-content: center;
+}
+
+.narrow-container {
+  padding-bottom: 7rem;
+  padding-top: 2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.project-heading {
+  color: hsl(240deg 60% 25%);
+  font-family: 'Playfair Display';
+  font-size: 45px;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+  margin-left: 30px;
+  padding-left: 20px;
+}
+
+.subheading {
+  margin-top: 7rem;
+  width: 70%;
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 30px;
+  padding-left: 20px;
+}
+
+.project-container {
+  padding-bottom: 7rem;
+  padding-top: 3rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.two-column-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.sub-container-left {
+  flex: 1;
+}
+
+.sub-container-right {
+  flex: 1;
+}
+
+.additional-info-container {
+  display: flex;
+  justify-content: space-evenly;
+  flex: 1;
+}
+
+.tags {
+  list-style: none;
+  padding: 0;
+}
+
+.about,
+.additional-info-container {
+  margin-top: 20px;
+  line-height: 30px;
+  margin-left: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.arrow {
+  padding: 0 5px;
+  font-size: 12px;
+}
+
+.subject-link {
+  color: hsl(240deg 60% 25%);
+  text-decoration: none;
+}
+
+.subject-link:hover {
+  color: #db3056;
+  text-decoration: underline;
+}
+
+.img-wrapper {
+  display: block;
+  margin: 11vh auto 17vh auto;
+  width: 60%;
+  box-shadow: 1em 0 0.5em rgba(182, 180, 180, 0.1),
+    -1em 0 0.5em rgba(182, 180, 180, 0.1);
+  border-radius: 5px;
+}
+
+.stack-logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+}
+
+.logo-img {
+  margin-right: 20px;
+}
+
+.logo-name {
+  border-bottom: solid;
+  width: 200px;
+}
+
+@media (min-width: 1500px) {
+  .narrow-container {
+    margin-left: 100px;
+    margin-right: 100px;
+  }
+}
+
 @media (max-width: 1024px) {
   .container {
     padding: 0;
@@ -27,7 +145,7 @@
     padding: 0;
   }
 
-  .heading {
+  .section-heading {
     font-size: 50px;
     margin: 3rem 0;
     padding: 0;
@@ -43,7 +161,7 @@
     padding: 0;
   }
 
-  .heading {
+  .section-heading {
     font-size: 35px;
     margin: 3rem 0;
     padding: 0;

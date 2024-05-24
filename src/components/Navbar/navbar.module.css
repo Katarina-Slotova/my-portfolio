@@ -1,6 +1,6 @@
 .navbar {
   width: 100%;
-  max-width: 1500px;
+/*   max-width: 1500px; */
   padding: 0.5vh 0;
   position: fixed;
   display: flex;

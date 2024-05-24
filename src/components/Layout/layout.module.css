@@ -4,14 +4,16 @@ body {
   color: rgb(63, 63, 63);
   font-weight: 300;
   font-size: 18px;
+  display: flex;
+  justify-content: center;
 }
 
 .inner-content {
   padding: 0.1vh 0;
 }
 
-.container {
-  max-width: 1500px;
+.layout-container {
+/*   max-width: 1500px; */
   opacity: 0;
   animation: fade-in-right ease 0.5s forwards;
 }
@@ -28,7 +30,6 @@ body {
 }
 
 @media (max-width: 700px) {
-
 }
 
 /* .nav-link-item {

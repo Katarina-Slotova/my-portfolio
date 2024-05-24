@@ -1,5 +1,5 @@
 import React from 'react'
-import { container, innerContent } from './layout.module.css'
+import { layoutContainer, innerContent } from './layout.module.css'
 import Footer from '../Footer'
 import Navbar from '../Navbar'
 
@@ -33,7 +33,7 @@ function Layout({ isOnScreen, children }) {
     <div>
       <main>
         <Navbar isOnScreen={isOnScreen} showNavbar={showNavbar} />
-        <div className={container}>
+        <div className={layoutContainer}>
           <div className={innerContent}>
             {/* <h1 className={heading}>{pageTitle}</h1> */}
             {children}

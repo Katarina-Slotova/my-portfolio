@@ -8,7 +8,7 @@ import Introduction from '../components/Introduction'
 import Contact from '../components/Contact'
 import { App } from '../components/App'
 import useIsOnScreen from '../hooks/useIsOnScreen'
-import { heading, container } from './page.module.css'
+import { sectionHeading, container, narrowContainer } from './page.module.css'
 
 const IndexPage = ({ data }) => {
   const sectionOneRef = React.useRef()
@@ -42,19 +42,19 @@ const IndexPage = ({ data }) => {
           <Introduction />
         </div>
 
-        <div className={container}>
+        <div className={narrowContainer}>
           <h1 ref={sectionTwoRef} id='skills' style={{ margin: '0' }}>
             {}
           </h1>
-          <h1 className={heading}>Skills & Experiences</h1>
+          <h1 className={sectionHeading}>Skills & Experiences</h1>
           <Skills />
         </div>
 
-        <div className={container}>
+        <div className={narrowContainer}>
           <h1 ref={sectionThreeRef} id='projects' style={{ margin: '0' }}>
             {}
           </h1>
-          <h1 className={heading}>Selected Projects</h1>
+          <h1 className={sectionHeading}>Selected Projects</h1>
           <Projects data={data} />
         </div>
 
@@ -66,7 +66,7 @@ const IndexPage = ({ data }) => {
           }}
         >
           <h1 style={{ margin: '0' }}>{}</h1>
-          <h1 ref={sectionFourRef} id='contact' className={heading}>
+          <h1 ref={sectionFourRef} id='contact' className={sectionHeading}>
             Let's get in touch!
           </h1>
           <Contact />

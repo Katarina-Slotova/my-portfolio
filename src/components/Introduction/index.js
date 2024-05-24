@@ -22,15 +22,15 @@ function Introduction() {
   return (
     <div className={container}>
       <div>
-          <div style={{ width: '180px', height: '30px' }}>
-            <StaticImage
-              height={1000}
-              width={600}
-              className={profileImgMobile}
-              src='../../images/profile-img-2.png'
-              alt='Image of a phone and a laptop.'
-            />
-          </div>
+        <div style={{ width: '180px', height: '30px' }}>
+          <StaticImage
+            height={1000}
+            width={600}
+            className={profileImgMobile}
+            src='../../images/profile-img-2.png'
+            alt='Profile image.'
+          />
+        </div>
         <div className={columnLeft}>
           <motion.div
             animate={{ x: 100 }}
@@ -94,7 +94,7 @@ function Introduction() {
           height={800}
           className={profileImg}
           src='../../images/profile-img.jpg'
-          alt='Image of a phone and a laptop.'
+          alt='Profile image.'
         />
       </div>
     </div>
