@@ -2,7 +2,7 @@
   position: relative;
   border-radius: 10px;
   height: 700px;
-  max-width: 950px;
+  max-width: 1000px;
   margin: auto;
   margin-top: 8rem;
   overflow: hidden;
@@ -24,8 +24,9 @@
 .left,
 .right {
   background-color: hsl(240deg 60% 25%);
+  border: none;
   color: white;
-  padding: 1px;
+  padding: 2px;
   border-radius: 50%;
   position: absolute;
   top: 0;
@@ -52,7 +53,7 @@
 }
 
 .indicator {
-  margin-top: 20px;
+  margin-top: 25px;
   display: flex;
   justify-content: center;
   gap: 20px;
@@ -60,12 +61,16 @@
 
 .dot {
   background-color: hsl(240, 4%, 53%);
-  width: 15px;
-  height: 15px;
+  width: 13px;
+  height: 13px;
   border-radius: 50%;
   cursor: pointer;
+  opacity: 0.6;
+  padding: 0;
+  border: none;
 }
 
 .active {
   background-color: hsl(240deg 60% 25%);
+  opacity: 0.6;
 }
