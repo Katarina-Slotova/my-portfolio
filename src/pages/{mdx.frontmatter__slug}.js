@@ -23,6 +23,8 @@ import {
   logoImg,
   logoName,
   redirect,
+  subContainerStackVisible,
+  subContainerStackHidden,
 } from './page.module.css'
 import { intro, purpose, stack, images, problems } from '../data/data.js'
 import { FaArrowRight, FaArrowLeft } from 'react-icons/fa'
@@ -62,13 +64,18 @@ function Project({ data, children }) {
                 <h4 style={{ marginTop: '0', textTransform: 'uppercase' }}>
                   Type
                 </h4>
-                <p>{intro[data.mdx.frontmatter.imageId].type}</p>
+                <p style={{ marginTop: '0', marginBottom: '1.5rem' }}>
+                  {intro[data.mdx.frontmatter.imageId].type}
+                </p>
               </div>
               <div>
                 <h4 style={{ marginTop: '0', textTransform: 'uppercase' }}>
                   Stack
                 </h4>
-                <ul className={tags}>
+                <ul
+                  className={tags}
+                  style={{ marginTop: '0', marginBottom: '1.5rem' }}
+                >
                   {data.mdx.frontmatter.tags.map((tag, id) => (
                     <li key={id}>{tag}</li>
                   ))}
@@ -81,6 +88,7 @@ function Project({ data, children }) {
                 <a
                   className={subjectLink}
                   href='https://github.com/Katarina-Slotova/Camagru-hive'
+                  style={{ marginTop: '0', marginBottom: '1.5rem' }}
                 >
                   View on Github <FaArrowRight className={arrow} />
                 </a>
@@ -93,9 +101,9 @@ function Project({ data, children }) {
               alt={data.mdx.frontmatter.hero_image_alt}
             />
           </div>
-          <h2 className={subheading}>Project Purpose & Goal</h2>
           <div className={twoColumnWrapper}>
-            <div style={{ width: '50%' }}>
+            <div className={subContainerLeft}>
+              <h2 className={subheading}>Project Purpose & Goal</h2>
               <p className={about}>
                 {purpose[data.mdx.frontmatter.imageId].purpose}
               </p>
@@ -103,9 +111,10 @@ function Project({ data, children }) {
                 {purpose[data.mdx.frontmatter.imageId].goal}
               </p>
             </div>
+            <div className={subContainerRight}></div>
           </div>
-          <div className={twoColumnWrapper} style={{ marginTop: '7rem' }}>
-            <div className={subContainerLeft}>
+          <div className={twoColumnWrapper}>
+            <div className={subContainerStackVisible}>
               {stack[data.mdx.frontmatter.imageId].stackImgs.map(
                 ({ src, alt, name }) => {
                   return (
@@ -126,21 +135,39 @@ function Project({ data, children }) {
             <div className={subContainerRight}>
               <h2
                 className={subheading}
-                style={{ paddingLeft: '0', marginTop: '0' }}
+                style={{ marginTop: '0' }}
               >
                 Web Stack & Constraints
               </h2>
-              <p className={about} style={{ paddingLeft: '0' }}>
+              <p className={about} >
                 {stack[data.mdx.frontmatter.imageId].constraints}
               </p>
-              <p className={about} style={{ paddingLeft: '0' }}>
+              <p className={about} >
                 {stack[data.mdx.frontmatter.imageId].stack}
               </p>
             </div>
+            <div className={subContainerStackHidden}>
+              {stack[data.mdx.frontmatter.imageId].stackImgs.map(
+                ({ src, alt, name }) => {
+                  return (
+                    <div className={stackLogoContainer}>
+                      <img
+                        src={src}
+                        alt={alt}
+                        width={50}
+                        height={50}
+                        className={logoImg}
+                      />
+                      <p className={logoName}>{name}</p>
+                    </div>
+                  )
+                }
+              )}
+            </div>
           </div>
-          <h2 className={subheading}>Problems & Thought Process</h2>
           <div className={twoColumnWrapper}>
             <div className={subContainerLeft}>
+              <h2 className={subheading}>Problems & Thought Process</h2>
               <p className={about}>
                 {problems[data.mdx.frontmatter.imageId].thoughts}
               </p>
@@ -152,10 +179,7 @@ function Project({ data, children }) {
           </div>
           <Carousel images={images[data.mdx.frontmatter.imageId].images} />
           <div className={redirect}>
-            <Link
-              className={subjectLink}
-              href='/#projects'
-            >
+            <Link className={subjectLink} href='/#projects'>
               <FaArrowLeft className={arrow} /> Back
             </Link>
           </div>

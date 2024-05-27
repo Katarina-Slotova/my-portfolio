@@ -74,3 +74,19 @@
   background-color: hsl(240deg 60% 25%);
   opacity: 0.6;
 }
+
+@media (max-width: 1000px) {
+  .carousel {
+    height: 260px;
+    width: 350px;
+  }
+
+  .left,
+  .right {
+    scale: 70%;
+  }
+
+  .dot {
+    scale: 70%;
+  }
+}

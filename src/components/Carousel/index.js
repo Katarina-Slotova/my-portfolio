@@ -39,10 +39,6 @@ function Carousel({ images }) {
         duration: 0.5,
       },
     },
-/*     hover: {
-      backgroundColor: '#db3056',
-      scale: 1.2,
-    }, */
   }
 
   const dotVariants = {
@@ -54,10 +50,6 @@ function Carousel({ images }) {
       scale: 1.2,
       transition: { type: 'spring', stiffness: 900, damping: 15 },
     },
-/*     hover: {
-      scale: 1.1,
-      transition: { duration: 0.3 },
-    }, */
   }
 
   function handleNext() {
