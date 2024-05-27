@@ -104,15 +104,20 @@ export const problems = [
   { problems: '', thoughts: '' },
   {
     problems:
-      'The choice of technologies used for this project was limited due to mandatory constraints.',
+      'The feature that turned out to be particularly problematic was \
+			taking photos using webcam and placing stickers correctly on top of them. I used one HTML canvas tag for this task. \
+			We can think of this canvas tag as an actual canvas in real life - it is a blank space that allows us to draw on it.\
+			 After a few hours of trial-and-error, I solved my problem by using two separate HTML canvases instead of just one - \
+			 one for the photo and the other one for the stickers. Then I was able to place the canvas with the stickers on top of the canvas with the picture.',
     thoughts:
-      "Exclusively PHP was used to handle server-side logic. \
-		Client-side interactivity was implemented solely using HTML, CSS, and JavaScript. \
-		No frameworks and no libraries were authorized on the server side. \
-		Since JavaScript-free client-side frameworks were allowed, I decided to use Bulma. \
-		I chose MySQL as the database management system. I had no previous hands-on experience with database systems. \
-		MySQL's user-friendly interface and good documentation made it an ideal choice for a beginner, \
-		allowing me to effectively learn and implement database functionalities necessary for the project.",
+      'Although this was a school assignment, I approached it as I would a real-life \
+			 project and employed practices aligned with industry standards. The first step was to \
+			 sketch the layout and design of the website. Key UI elements included \
+			 forms for creating new posts and feed to display posts. I aimed for a clean \
+			 and intuitive design inspired by Instagram. \
+			 My development process started with setting up a version control system. \
+			 Then I worked on user authentication and developed key features such as feed, image uploads, likes and comments.\
+			 I implemented validation and error handling to ensure secure file uploads.',
   },
 ]
 

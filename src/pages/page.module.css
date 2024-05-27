@@ -50,7 +50,7 @@
 }
 
 .project-container {
-  padding-bottom: 7rem;
+  padding-bottom: 4rem;
   padding-top: 3rem;
   padding-left: 2rem;
   padding-right: 2rem;
@@ -127,6 +127,11 @@
 .logo-name {
   border-bottom: solid;
   width: 200px;
+}
+
+.redirect {
+  margin-top: 4rem;
+  margin-left: 3rem;
 }
 
 @media (min-width: 1500px) {

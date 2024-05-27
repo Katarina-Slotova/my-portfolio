@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'gatsby'
 import Layout from '../components/Layout'
 import Seo from '../components/Seo'
 import { App } from '../components/App'
@@ -21,9 +22,10 @@ import {
   stackLogoContainer,
   logoImg,
   logoName,
+  redirect,
 } from './page.module.css'
 import { intro, purpose, stack, images, problems } from '../data/data.js'
-import { FaArrowRight } from 'react-icons/fa'
+import { FaArrowRight, FaArrowLeft } from 'react-icons/fa'
 
 function Project({ data, children }) {
   const image = getImage(data.mdx.frontmatter.intro_img)
@@ -102,7 +104,7 @@ function Project({ data, children }) {
               </p>
             </div>
           </div>
-          <div className={twoColumnWrapper} style={{marginTop: '7rem'}}>
+          <div className={twoColumnWrapper} style={{ marginTop: '7rem' }}>
             <div className={subContainerLeft}>
               {stack[data.mdx.frontmatter.imageId].stackImgs.map(
                 ({ src, alt, name }) => {
@@ -122,7 +124,10 @@ function Project({ data, children }) {
               )}
             </div>
             <div className={subContainerRight}>
-              <h2 className={subheading} style={{paddingLeft: '0', marginTop: '0'}}>
+              <h2
+                className={subheading}
+                style={{ paddingLeft: '0', marginTop: '0' }}
+              >
                 Web Stack & Constraints
               </h2>
               <p className={about} style={{ paddingLeft: '0' }}>
@@ -137,15 +142,23 @@ function Project({ data, children }) {
           <div className={twoColumnWrapper}>
             <div className={subContainerLeft}>
               <p className={about}>
-                {problems[data.mdx.frontmatter.imageId].problems}
+                {problems[data.mdx.frontmatter.imageId].thoughts}
               </p>
               <p className={about}>
-                {problems[data.mdx.frontmatter.imageId].thoughts}
+                {problems[data.mdx.frontmatter.imageId].problems}
               </p>
             </div>
             <div className={subContainerRight}></div>
           </div>
           <Carousel images={images[data.mdx.frontmatter.imageId].images} />
+          <div className={redirect}>
+            <Link
+              className={subjectLink}
+              href='/#projects'
+            >
+              <FaArrowLeft className={arrow} /> Back
+            </Link>
+          </div>
         </div>
       </Layout>
     </App>
