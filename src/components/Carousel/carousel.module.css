@@ -1,8 +1,8 @@
 .carousel {
   position: relative;
   border-radius: 10px;
-  height: 700px;
-  max-width: 1000px;
+  height: 600px;
+  max-width: 900px;
   margin: auto;
   margin-top: 8rem;
   overflow: hidden;
@@ -12,8 +12,8 @@
 }
 
 .carousel img {
-  width: 99%;
-  height: 99%;
+  width: 100%;
+  height: 100%;
 }
 
 .slide-direction {
@@ -73,6 +73,21 @@
 .active {
   background-color: hsl(240deg 60% 25%);
   opacity: 0.6;
+}
+
+.img-description-wrapper {
+  display: flex;
+  justify-content: center;
+	box-shadow: 1em 0 0.5em rgba(182, 180, 180, 0.1),
+	-1em 0 0.5em rgba(182, 180, 180, 0.1);
+  max-width: 900px;
+  margin: auto;
+  height: 25px;
+  align-items: center;
+}
+
+.img-description {
+  font-size: 14px;
 }
 
 @media (max-width: 1000px) {

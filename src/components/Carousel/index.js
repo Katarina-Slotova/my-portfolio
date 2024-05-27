@@ -8,6 +8,8 @@ import {
   indicator,
   dot,
   active,
+  imgDescriptionWrapper,
+  imgDescription,
 } from './carousel.module.css'
 import { IoIosArrowBack } from 'react-icons/io'
 import { IoIosArrowForward } from 'react-icons/io'
@@ -93,6 +95,9 @@ function Carousel({ images }) {
             <IoIosArrowForward />
           </button>
         </div>
+      </div>
+      <div className={imgDescriptionWrapper}>
+        <p className={imgDescription}>{images[currentIndex].description}</p>
       </div>
       <div className={indicator}>
         {images.map((_, index) => {

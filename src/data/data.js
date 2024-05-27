@@ -16,6 +16,9 @@ import Bulma from '../images/bulma.png'
 import login from '../images/Camagru/login.png'
 import photos from '../images/Camagru/photos.png'
 import upload from '../images/Camagru/upload.png'
+import profile from '../images/Camagru/profile.png'
+import settings from '../images/Camagru/settings.png'
+import search from '../images/Camagru/search.png'
 
 export const intro = [
   {
@@ -125,9 +128,12 @@ export const images = [
   {},
   {
     images: [
-      { src: login, alt: 'Camagru login page.' },
-      { src: photos, alt: 'Camagru photos page.' },
-      { src: upload, alt: 'Camagru upload pictures page.' },
+      { src: login, alt: 'Camagru login page.', description: 'Login page.' },
+      { src: photos, alt: 'Camagru photos page.', description: 'Take photos with filters (stickers).' },
+      { src: upload, alt: 'Camagru upload pictures page.', description: 'Upload pictures and optionally add filters (stickers).' },
+      { src: profile, alt: 'Camagru user profile page.', description: "User's profile with their own photos, where they can see who follows them and who they follow." },
+      { src: settings, alt: 'Camagru user settings page.', description: 'Edit information and email notification preferences.' },
+      { src: search, alt: 'Camagru search for users feature.', description: 'Search for other users.' },
     ],
   },
 ]
