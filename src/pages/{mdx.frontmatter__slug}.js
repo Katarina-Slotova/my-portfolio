@@ -41,7 +41,7 @@ function Project({ data, children }) {
             {data.mdx.frontmatter.title}&nbsp;&nbsp;
             {intro[data.mdx.frontmatter.imageId].emoji}
           </h1>
-          <div className={twoColumnWrapper}>
+          <div className={twoColumnWrapper} style={{marginTop: '2.5rem'}}>
             <div className={subContainerLeft}>
               <p className={about}>
                 {intro[data.mdx.frontmatter.imageId].text}
@@ -87,7 +87,7 @@ function Project({ data, children }) {
                 </h4>
                 <a
                   className={subjectLink}
-                  href='https://github.com/Katarina-Slotova/Camagru-hive'
+                  href={intro[data.mdx.frontmatter.imageId].repoLink}
                   style={{ marginTop: '0', marginBottom: '1.5rem' }}
                 >
                   View on Github <FaArrowRight className={arrow} />

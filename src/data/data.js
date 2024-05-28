@@ -2,44 +2,52 @@ import ReactImg from '../images/react.png'
 import JsImg from '../images/js.png'
 import CImg from '../images/c.png'
 import CssImg from '../images/css.png'
-import FramerImg from '../images/framer-motion.png'
-import GitImg from '../images/git.png'
 import HtmlImg from '../images/html.png'
 import MysqlImg from '../images/mysql.png'
 import NodeImg from '../images/node.png'
 import PhpImg from '../images/php.png'
 import PostgresImg from '../images/postgresql.png'
-import StyledImg from '../images/styled-components.png'
 import TailwindImg from '../images/tailwind.png'
-import GatsbyImg from '../images/icon.png'
 import Bulma from '../images/bulma.png'
+import Redux from '../images/redux.png'
 import login from '../images/Camagru/login.png'
 import photos from '../images/Camagru/photos.png'
 import upload from '../images/Camagru/upload.png'
 import profile from '../images/Camagru/profile.png'
 import settings from '../images/Camagru/settings.png'
 import search from '../images/Camagru/search.png'
+import loginM from '../images/Matcha/loginM.png'
+import homeM from '../images/Matcha/homeM.png'
+import profileM from '../images/Matcha/profileM.png'
+import otherProfileM from '../images/Matcha/otherProfileM.png'
+import uploadM from '../images/Matcha/uploadM.png'
+import chatM from '../images/Matcha/chatM.png'
+import notifM from '../images/Matcha/notifM.png'
+import searchM from '../images/Matcha/searchM.png'
 
 export const intro = [
   {
     emoji: '🔥',
-    text: "Camagru is the first project in the Web Development branch at Hive Helsinki, \
-		which I created from scratch all by myself. It allows user to create an account, \
+    text: "Matcha is a Tinder-like dating website I created from scratch with two schoolmates of mine. \
+		It allows user to create an account, \
 		which is verified via an email with unique link. After that, user can log in, \
-		upload pictures with none, one or more predefined images (stickers), take a \
-		picture using their webcam and jazz it up with one or more stickers, like \
-		pictures and comment on them, edit their profile, and search for other users\
-		 and follow them. Every time someone comments on user's picture, user will \
-		 receive a notification email. User can turn off the notifications in the \
-		 profile settings. The gallery with all the pictures \
-		 is public, so people can see them without creating an account or logging in.",
+		complete their profile by adding their gender, sexual preferences, bio, list of their interests, \
+		profile picture and optionally four other pictures. User gets \
+		a list of match suggestions based on their preferences. They can run an advanced search \
+		selecting one or a few criteria, such as age, location or interests. The user can \
+		check other users' profiles and see if they're online, or the date and time when \
+		they were online the last time. They can also report users as “fake accounts” \
+		and block them. A blocked user won’t appear anymore in the research results. \
+		When two users like each other, they can start chatting in real time. ",
     subsection:
-      'XSS and SQL injction attacks are rather difficult to achieve, since I prevent \
-		all kinds of shenanigans 😁',
+      'Users receive real-time notifications \
+			when they were liked by another user, their profile was checked by another user, \
+			they received a message and when a user they liked liked them back.',
     subject: 'For more information about the project, check out the ',
     subjectLink:
-      'https://github.com/Katarina-Slotova/Camagru-hive/blob/main/subject.pdf',
+      'https://github.com/Katarina-Slotova/matcha-hive/blob/main/matcha.en.pdf',
     type: 'Team school project',
+    repoLink: 'https://github.com/Katarina-Slotova/matcha-hive',
   },
   {
     emoji: '📸',
@@ -60,15 +68,28 @@ export const intro = [
     subjectLink:
       'https://github.com/Katarina-Slotova/Camagru-hive/blob/main/subject.pdf',
     type: 'Solo school project',
+    repoLink: 'https://github.com/Katarina-Slotova/Camagru-hive',
   },
 ]
 
 export const purpose = [
-  { purpose: '', goal: '' },
   {
     purpose:
-      "Camagru was the first web development project in my school's curriculum. \
-The challenge was to create a small web application that allows user \
+      "Matcha was the second web development project in my school's curriculum \
+			and the first team project I worked on. \
+			This project was an intorduction to a more advanced tool for creating web applications:\
+			the micro-framework. The purpose was to create a Tinder-like dating website,\
+			where interactions between the users will be at the very heart of the project.",
+    goal: 'Our goal was to create a robust and user-friendly online dating platform \
+		that facilitates connections between users through comprehensive profile customization,\
+		real-time interactions and advanced search functionalities, \
+		while ensuring user safety and privacy through features like account verification,\
+		reporting and blocking.',
+  },
+  {
+    purpose:
+      "Camagru was the first full-stack web development project in my school's curriculum. \
+The challenge was to create a small Instagram-like web application that allows user \
 to edit their photos using their webcam and predifined images.\
  ",
     goal: "My goal was to create a comprehensive and user-friendly \
@@ -80,7 +101,29 @@ all while being protected against security vulnerabilities like XSS and SQL inje
 ]
 
 export const stack = [
-  { stack: '' },
+  {
+    constraints:
+      'We were free to choose any technologies for this project. \
+			The only constraint was that we were not allowed to use non-relational databases.',
+    stack:
+      "We chose JavaScript, ReactJS, Redux, NodeJS, ExpressJS, PostgreSQL and TailwindCSS aas the main technologies.\
+			We didn't have any previous experience with this stack and we learned everything by doing.\
+		  ReactJS offered the benefits of reusable components and hooks, which we found very useful for building the UI.\
+			We chose Redux for state handling to avoid the need to pass props down through multiple layers of components.\
+			We had previous experience with MySQL, and we thought this project would be the perfect opportunity \
+			to learn PostgreSQL. We chose NodeJS to handle the backend because of its reliability and efficiency. \
+			The microframework of our choice was ExpressJS as it is the most standard one for NodeJS. \
+			Although Tailwind proved to be a bit challenging at first, \
+			once we got a hang of it, it turned out to be a fantastic tool for creating unique and responsive design.",
+    stackImgs: [
+      { src: JsImg, alt: 'JavaScript logo.', name: 'JavaScript' },
+      { src: ReactImg, alt: 'React logo.', name: 'ReactJS' },
+      { src: Redux, alt: 'Redux logo.', name: 'Redux' },
+      { src: NodeImg, alt: 'Node logo.', name: 'NodeJS' },
+      { src: TailwindImg, alt: 'Tailwind logo.', name: 'TailwindCSS' },
+      { src: PostgresImg, alt: 'PosgreSQL logo.', name: 'PostgreSQL' },
+    ],
+  },
   {
     constraints:
       'The choice of technologies used for this project was limited due to mandatory constraints.',
@@ -104,7 +147,22 @@ export const stack = [
 ]
 
 export const problems = [
-  { problems: '', thoughts: '' },
+  {
+    problems:
+      'The main issues we encountered during this project were due to lack of frequent \
+			updates and communication among us as team members. This led to problems when merging \
+			our individual contrubitions of the project we each worked on separately, \
+			causing integration challenges and conflicts. This helped us realize the \
+			importance of regular updates and close collaboration, as well as improved \
+			our teamwork and other soft skills.',
+    thoughts:
+      'Just as with other school assignments, I approached Matcha as I would a real-life team \
+			 project and employed practices aligned with industry standards. The first step was to \
+			 summarize the workload and equally divide the tasks. We used Trello app in order to \
+			 keep each other updated, and Github for version control. \
+			 We prepared a basic layout and design of the website together, then worked \
+			on our respective tasks, while keeping each other updated about the progress and problems we encountered.',
+  },
   {
     problems:
       'The feature that turned out to be particularly problematic was \
@@ -125,15 +183,75 @@ export const problems = [
 ]
 
 export const images = [
-  {},
+  {
+    images: [
+      { src: loginM, alt: 'Matcha login page.', description: 'Login page.' },
+      {
+        src: homeM,
+        alt: 'Matcha suggestions feed page.',
+        description: 'Match suggestions feed.',
+      },
+      {
+        src: profileM,
+        alt: 'Matcha user profile page.',
+        description: 'Profile page of logged in user.',
+      },
+      {
+        src: otherProfileM,
+        alt: 'Matcha other user profile page.',
+        description: 'Profile page of another user.',
+      },
+      {
+        src: uploadM,
+        alt: 'Matcha upload images page.',
+        description: 'Upload four more images in addition to profile picture.',
+      },
+      {
+        src: chatM,
+        alt: 'Matcha chat.',
+        description: 'Chat with connected users.',
+      },
+      {
+        src: notifM,
+        alt: 'Matcha notifications.',
+        description: 'View notifications.',
+      },
+      {
+        src: searchM,
+        alt: 'Matcha search for other users feature.',
+        description: 'Search for users.',
+      },
+    ],
+  },
   {
     images: [
       { src: login, alt: 'Camagru login page.', description: 'Login page.' },
-      { src: photos, alt: 'Camagru photos page.', description: 'Take photos with filters (stickers).' },
-      { src: upload, alt: 'Camagru upload pictures page.', description: 'Upload pictures and optionally add filters (stickers).' },
-      { src: profile, alt: 'Camagru user profile page.', description: "User's profile with their own photos, where they can see who follows them and who they follow." },
-      { src: settings, alt: 'Camagru user settings page.', description: 'Edit information and email notification preferences.' },
-      { src: search, alt: 'Camagru search for users feature.', description: 'Search for other users.' },
+      {
+        src: photos,
+        alt: 'Camagru photos page.',
+        description: 'Take photos with filters (stickers).',
+      },
+      {
+        src: upload,
+        alt: 'Camagru upload pictures page.',
+        description: 'Upload pictures and optionally add filters (stickers).',
+      },
+      {
+        src: profile,
+        alt: 'Camagru user profile page.',
+        description:
+          "User's profile with their own photos, where they can see who follows them and who they follow.",
+      },
+      {
+        src: settings,
+        alt: 'Camagru user settings page.',
+        description: 'Edit information and email notification preferences.',
+      },
+      {
+        src: search,
+        alt: 'Camagru search for users feature.',
+        description: 'Search for other users.',
+      },
     ],
   },
 ]

@@ -1,8 +1,8 @@
 .carousel {
   position: relative;
   border-radius: 10px;
-  height: 600px;
-  max-width: 900px;
+  height: 680px;
+  max-width: 1200px;
   margin: auto;
   margin-top: 8rem;
   overflow: hidden;
@@ -53,7 +53,7 @@
 }
 
 .indicator {
-  margin-top: 25px;
+  margin-top: 20px;
   display: flex;
   justify-content: center;
   gap: 20px;
@@ -80,7 +80,7 @@
   justify-content: center;
 	box-shadow: 1em 0 0.5em rgba(182, 180, 180, 0.1),
 	-1em 0 0.5em rgba(182, 180, 180, 0.1);
-  max-width: 900px;
+  max-width: 1200px;
   margin: auto;
   height: 25px;
   align-items: center;
