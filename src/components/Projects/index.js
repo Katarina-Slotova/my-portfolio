@@ -81,7 +81,12 @@ function Projects({ data }) {
           whileTap={{ scale: 0.9 }}
           transition={{ type: 'spring', stiffness: 400, damping: 50 }}
         >
-          <a href='https://github.com/Katarina-Slotova' className={githubLink}>
+          <a
+            href='https://github.com/Katarina-Slotova'
+            className={githubLink}
+            target='_blank'
+            rel='noreferrer'
+          >
             Dive into my Github protfolio
             <FaArrowRight className={arrow} />
           </a>

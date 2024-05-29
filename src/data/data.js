@@ -43,7 +43,6 @@ export const intro = [
       'Users receive real-time notifications \
 			when they were liked by another user, their profile was checked by another user, \
 			they received a message and when a user they liked liked them back.',
-    subject: 'For more information about the project, check out the ',
     subjectLink:
       'https://github.com/Katarina-Slotova/matcha-hive/blob/main/matcha.en.pdf',
     type: 'Team school project',
@@ -64,7 +63,42 @@ export const intro = [
     subsection:
       'XSS and SQL injction attacks are rather difficult to achieve, since I prevent \
 		all kinds of shenanigans 😁',
-    subject: 'For more information about the project, check out the ',
+    subjectLink:
+      'https://github.com/Katarina-Slotova/Camagru-hive/blob/main/subject.pdf',
+    type: 'Solo school project',
+    repoLink: 'https://github.com/Katarina-Slotova/Camagru-hive',
+  },
+  {
+    emoji: '🖨️',
+    text: "Regardless of the programming language, printf is one of the most useful functions out there. \
+		But what if you are not allowed to use printf? That is one of the main rules at Hive Helsinki - \
+		except a few standard C library functions, students cannot use the standard C library \
+		to complete their projects. It's easy to code one's own putstr and putnbr functions \
+		to print strings and numbers to the standard output, but they're uncomparably less convenient than printf.",
+    subsection:
+      "That's why it was so important to add \
+			my own printf to the already extensive C library I previously coded as part\
+			of my very first school project.",
+    subjectLink:
+      'https://github.com/Katarina-Slotova/ft_printf-hive/blob/main/ft_printf.en.pdf',
+    type: 'Solo school project',
+    repoLink: 'https://github.com/Katarina-Slotova/ft_printf-hive',
+  },
+  {
+    emoji: '📸',
+    text: "Camagru is the first website I created from scratch all by myself. \
+		It allows user to create an account, \
+		which is verified via an email with unique link. User can log in, \
+		upload pictures with none, one or more predefined images (stickers), take a \
+		picture using their webcam and jazz it up with one or more stickers, like \
+		pictures and comment on them, edit their profile, and search for other users\
+		 and follow them. Every time someone comments on user's picture, user will \
+		 receive a notification email. User can turn off the notifications in the \
+		 profile settings. The gallery with all the pictures \
+		 is public, so people can see them without creating an account or logging in.",
+    subsection:
+      'XSS and SQL injction attacks are rather difficult to achieve, since I prevent \
+		all kinds of shenanigans 😁',
     subjectLink:
       'https://github.com/Katarina-Slotova/Camagru-hive/blob/main/subject.pdf',
     type: 'Solo school project',
@@ -85,6 +119,30 @@ export const purpose = [
 		real-time interactions and advanced search functionalities, \
 		while ensuring user safety and privacy through features like account verification,\
 		reporting and blocking.',
+  },
+  {
+    purpose:
+      "Camagru was the first full-stack web development project in my school's curriculum. \
+The challenge was to create a small Instagram-like web application that allows user \
+to edit their photos using their webcam and predifined images.\
+ ",
+    goal: "My goal was to create a comprehensive and user-friendly \
+photo-sharing website focused on user's creativity, interaction, and security.\
+It allows users to connect, \
+express themselves visually, and easily manage their profiles, \
+all while being protected against security vulnerabilities like XSS and SQL injection attacks.",
+  },
+  {
+    purpose:
+      "Camagru was the first full-stack web development project in my school's curriculum. \
+The challenge was to create a small Instagram-like web application that allows user \
+to edit their photos using their webcam and predifined images.\
+ ",
+    goal: "My goal was to create a comprehensive and user-friendly \
+photo-sharing website focused on user's creativity, interaction, and security.\
+It allows users to connect, \
+express themselves visually, and easily manage their profiles, \
+all while being protected against security vulnerabilities like XSS and SQL injection attacks.",
   },
   {
     purpose:
@@ -144,6 +202,36 @@ export const stack = [
       { src: Bulma, alt: 'Bulma logo.', name: 'Bulma' },
     ],
   },
+  {
+    constraints:
+      'The only language allowed for this project was C. I was not allowed to use the \
+			official C library, except of four functions: write, malloc free and exit. If I needed \
+			any other function, I had to code it myself.',
+    stack:
+      'To recreate the original printf function, I used my own C library of almost 80 functions, \
+			which I coded previously as part of my very first school project.',
+    stackImgs: [{ src: CImg, alt: 'C logo.', name: 'C' }],
+  },
+  {
+    constraints:
+      'The choice of technologies used for this project was limited due to mandatory constraints.',
+    stack:
+      "Exclusively PHP was used to handle server-side logic. \
+			Client-side interactivity was implemented solely using HTML, CSS, and JavaScript. \
+			No frameworks and no libraries were authorized on the server side. \
+			Since JavaScript-free client-side frameworks were allowed, I decided to use Bulma. \
+			I chose MySQL as the database management system. I had no previous hands-on experience with database systems. \
+			MySQL's user-friendly interface and good documentation made it an ideal choice for a beginner, \
+			allowing me to effectively learn and implement database functionalities necessary for the project.",
+    stackImgs: [
+      { src: PhpImg, alt: 'PHP logo.', name: 'PHP' },
+      { src: HtmlImg, alt: 'Html logo.', name: 'HTML' },
+      { src: CssImg, alt: 'CSS logo.', name: 'CSS' },
+      { src: JsImg, alt: 'JavaScript logo.', name: 'JavaScript' },
+      { src: MysqlImg, alt: 'MySQL logo.', name: 'MySQL' },
+      { src: Bulma, alt: 'Bulma logo.', name: 'Bulma' },
+    ],
+  },
 ]
 
 export const problems = [
@@ -162,6 +250,40 @@ export const problems = [
 			 keep each other updated, and Github for version control. \
 			 We prepared a basic layout and design of the website together, then worked \
 			on our respective tasks, while keeping each other updated about the progress and problems we encountered.',
+  },
+  {
+    problems:
+      'The feature that turned out to be particularly problematic was \
+			taking photos using webcam and placing stickers correctly on top of them. I used one HTML canvas tag for this task. \
+			We can think of this canvas tag as an actual canvas in real life - it is a blank space that allows us to draw on it.\
+			 After a few hours of trial-and-error, I solved my problem by using two separate HTML canvases instead of just one - \
+			 one for the photo and the other one for the stickers. Then I was able to place the canvas with the stickers on top of the canvas with the picture.',
+    thoughts:
+      'Although this was a school assignment, I approached it as I would a real-life \
+			 project and employed practices aligned with industry standards. The first step was to \
+			 sketch the layout and design of the website. Key UI elements included \
+			 forms for creating new posts and feed to display posts. I aimed for a clean \
+			 and intuitive design inspired by Instagram. \
+			 My development process started with setting up a version control system. \
+			 Then I worked on user authentication and developed key features such as feed, image uploads, likes and comments.\
+			 I implemented validation and error handling to ensure secure file uploads.',
+  },
+  {
+    problems:
+      'The feature that turned out to be particularly problematic was \
+			taking photos using webcam and placing stickers correctly on top of them. I used one HTML canvas tag for this task. \
+			We can think of this canvas tag as an actual canvas in real life - it is a blank space that allows us to draw on it.\
+			 After a few hours of trial-and-error, I solved my problem by using two separate HTML canvases instead of just one - \
+			 one for the photo and the other one for the stickers. Then I was able to place the canvas with the stickers on top of the canvas with the picture.',
+    thoughts:
+      'Although this was a school assignment, I approached it as I would a real-life \
+			 project and employed practices aligned with industry standards. The first step was to \
+			 sketch the layout and design of the website. Key UI elements included \
+			 forms for creating new posts and feed to display posts. I aimed for a clean \
+			 and intuitive design inspired by Instagram. \
+			 My development process started with setting up a version control system. \
+			 Then I worked on user authentication and developed key features such as feed, image uploads, likes and comments.\
+			 I implemented validation and error handling to ensure secure file uploads.',
   },
   {
     problems:
@@ -253,6 +375,12 @@ export const images = [
         description: 'Search for other users.',
       },
     ],
+  },
+  {
+    images: [],
+  },
+  {
+    images: [],
   },
 ]
 

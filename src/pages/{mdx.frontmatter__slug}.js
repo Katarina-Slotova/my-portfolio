@@ -25,6 +25,7 @@ import {
   redirect,
   subContainerStackVisible,
   subContainerStackHidden,
+  hiddenCarousel,
 } from './page.module.css'
 import { intro, purpose, stack, images, problems } from '../data/data.js'
 import { FaArrowRight, FaArrowLeft } from 'react-icons/fa'
@@ -41,7 +42,7 @@ function Project({ data, children }) {
             {data.mdx.frontmatter.title}&nbsp;&nbsp;
             {intro[data.mdx.frontmatter.imageId].emoji}
           </h1>
-          <div className={twoColumnWrapper} style={{marginTop: '2.5rem'}}>
+          <div className={twoColumnWrapper} style={{ marginTop: '2.5rem' }}>
             <div className={subContainerLeft}>
               <p className={about}>
                 {intro[data.mdx.frontmatter.imageId].text}
@@ -50,7 +51,7 @@ function Project({ data, children }) {
                 {intro[data.mdx.frontmatter.imageId].subsection}
               </p>
               <p className={about}>
-                {intro[data.mdx.frontmatter.imageId].subject}{' '}
+                For more information about this project, check out the{' '}
                 <a
                   className={subjectLink}
                   href={intro[data.mdx.frontmatter.imageId].subjectLink}
@@ -89,6 +90,8 @@ function Project({ data, children }) {
                   className={subjectLink}
                   href={intro[data.mdx.frontmatter.imageId].repoLink}
                   style={{ marginTop: '0', marginBottom: '1.5rem' }}
+                  target='_blank'
+                  rel='noreferrer'
                 >
                   View on Github <FaArrowRight className={arrow} />
                 </a>
@@ -133,18 +136,42 @@ function Project({ data, children }) {
               )}
             </div>
             <div className={subContainerRight}>
-              <h2
-                className={subheading}
-                style={{ marginTop: '0' }}
-              >
+              <h2 className={subheading} style={{ marginTop: '0' }}>
                 Web Stack & Constraints
               </h2>
-              <p className={about} >
+              <p className={about}>
                 {stack[data.mdx.frontmatter.imageId].constraints}
               </p>
-              <p className={about} >
+              <p className={about}>
                 {stack[data.mdx.frontmatter.imageId].stack}
               </p>
+              {data.mdx.frontmatter.imageId === 2 ? (
+                <p className={about}>
+                  You can view my C library{' '}
+                  <a
+                    className={subjectLink}
+                    href='https://github.com/Katarina-Slotova/ft_printf-hive/tree/main/libft'
+                    target='_blank'
+                    rel='noreferrer'
+                  >
+                    here.
+                  </a>{' '}
+                  The set of tests I wrote to test proper functionality of the
+                  library, including a short shell script that automatically
+                  runs all the tests can be found{' '}
+                  <a
+                    href='https://github.com/Katarina-Slotova/42libft-tests'
+                    target='_blank'
+                    rel='noreferrer'
+                    className={subjectLink}
+                  >
+                    here
+                  </a>
+                  .
+                </p>
+              ) : (
+                ''
+              )}
             </div>
             <div className={subContainerStackHidden}>
               {stack[data.mdx.frontmatter.imageId].stackImgs.map(
@@ -177,7 +204,11 @@ function Project({ data, children }) {
             </div>
             <div className={subContainerRight}></div>
           </div>
-          <Carousel images={images[data.mdx.frontmatter.imageId].images} />
+          {images[data.mdx.frontmatter.imageId].images.length === 0 ? (
+            ''
+          ) : (
+            <Carousel images={images[data.mdx.frontmatter.imageId].images} />
+          )}
           <div className={redirect}>
             <Link className={subjectLink} href='/#projects'>
               <FaArrowLeft className={arrow} /> Back
@@ -188,6 +219,12 @@ function Project({ data, children }) {
     </App>
   )
 }
+
+/* className={`${
+              images[data.mdx.frontmatter.imageId].images.length === 0
+                ? console.log('hidden')
+                : console.log('not hidden')
+            }`} */
 
 export const projectData = graphql`
   query ($id: String) {
