@@ -1,6 +1,6 @@
 .navbar {
   width: 100%;
-/*   max-width: 1500px; */
+  /*   max-width: 1500px; */
   padding: 0.5vh 0;
   position: fixed;
   display: flex;
@@ -21,10 +21,11 @@
 .nav-links {
   display: flex;
   list-style: none;
+  padding-inline-start: 0;
 }
 
 .style-logo {
-  margin-left: 2rem;
+  margin-left: 3.2rem;
 }
 
 .nav-link-item {
@@ -114,5 +115,9 @@
 
   .sidebar {
     width: 100%;
+  }
+
+  .style-logo {
+    margin-left: 3rem;
   }
 }

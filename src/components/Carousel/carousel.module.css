@@ -88,10 +88,26 @@
 
 .img-description {
   font-size: 14px;
-	margin: auto 1rem;
+  margin: auto 1rem;
 }
 
 @media (max-width: 1000px) {
+  .carousel {
+    height: 460px;
+    width: 700px;
+  }
+
+  .left,
+  .right {
+    scale: 70%;
+  }
+
+  .dot {
+    scale: 70%;
+  }
+}
+
+@media (max-width: 700px) {
   .carousel {
     height: 260px;
     width: 360px;

@@ -35,12 +35,12 @@ function Navbar({ isOnScreen, showNavbar }) {
       <Link to='/'>
         <StaticImage
           className={styleLogo}
-          /* src='../../images/ks.png'
-          width={40}
-          height={55} */
-          src='../../images/ks1.png'
+          src='../../images/ks.png'
+          width={45}
+          height={55}
+          /* src='../../images/ks1.png'
           width={34}
-          height={60}
+          height={60} */
           alt='website logo'
         />
       </Link>
