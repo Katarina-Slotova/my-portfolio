@@ -134,15 +134,12 @@ all while being protected against security vulnerabilities like XSS and SQL inje
   },
   {
     purpose:
-      "Camagru was the first full-stack web development project in my school's curriculum. \
-The challenge was to create a small Instagram-like web application that allows user \
-to edit their photos using their webcam and predifined images.\
- ",
-    goal: "My goal was to create a comprehensive and user-friendly \
-photo-sharing website focused on user's creativity, interaction, and security.\
-It allows users to connect, \
-express themselves visually, and easily manage their profiles, \
-all while being protected against security vulnerabilities like XSS and SQL injection attacks.",
+      'Ft_printf was the fourth and the last school project I coded in C, before I moved to web development branch.\
+		It was a more advanced one, introducing the concept of variadic functions and ellipsis.',
+    goal: 'My goal was to create a function that replicates the functionality of the stndard printf function. \
+		It had to handle multiple format conversions (single characters, strings, pointers, \
+		signed and unsigned decimal numbers, octal numbers, hexadecimal numbers, floating point numbers),\
+		as well as flags that control how the argument is displayed.',
   },
   {
     purpose:
@@ -276,14 +273,12 @@ export const problems = [
 			 After a few hours of trial-and-error, I solved my problem by using two separate HTML canvases instead of just one - \
 			 one for the photo and the other one for the stickers. Then I was able to place the canvas with the stickers on top of the canvas with the picture.',
     thoughts:
-      'Although this was a school assignment, I approached it as I would a real-life \
-			 project and employed practices aligned with industry standards. The first step was to \
-			 sketch the layout and design of the website. Key UI elements included \
-			 forms for creating new posts and feed to display posts. I aimed for a clean \
-			 and intuitive design inspired by Instagram. \
-			 My development process started with setting up a version control system. \
-			 Then I worked on user authentication and developed key features such as feed, image uploads, likes and comments.\
-			 I implemented validation and error handling to ensure secure file uploads.',
+      "While scheduling out the project workload, I realized that if I continued coding in C, \
+			ft_printf would be an invaluable addition to my C library and I would continue \
+			extending its functionality for the purpose of future projects. That's why I wanted to keep the \
+			code well-structured and easily maintainable. I decided to code the \
+			conversions that seemed easier first, such as single characters and strings, and work my way \
+			towards the more complex ones.",
   },
   {
     problems:
