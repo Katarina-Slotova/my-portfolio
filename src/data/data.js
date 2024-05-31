@@ -10,6 +10,7 @@ import PostgresImg from '../images/postgresql.png'
 import TailwindImg from '../images/tailwind.png'
 import Bulma from '../images/bulma.png'
 import Redux from '../images/redux.png'
+import Shell from '../images/shell.png'
 import login from '../images/Camagru/login.png'
 import photos from '../images/Camagru/photos.png'
 import upload from '../images/Camagru/upload.png'
@@ -221,12 +222,7 @@ export const stack = [
 			MySQL's user-friendly interface and good documentation made it an ideal choice for a beginner, \
 			allowing me to effectively learn and implement database functionalities necessary for the project.",
     stackImgs: [
-      { src: PhpImg, alt: 'PHP logo.', name: 'PHP' },
-      { src: HtmlImg, alt: 'Html logo.', name: 'HTML' },
-      { src: CssImg, alt: 'CSS logo.', name: 'CSS' },
-      { src: JsImg, alt: 'JavaScript logo.', name: 'JavaScript' },
-      { src: MysqlImg, alt: 'MySQL logo.', name: 'MySQL' },
-      { src: Bulma, alt: 'Bulma logo.', name: 'Bulma' },
+      { src: Shell, alt: 'Shell logo.', name: 'Shell' },
     ],
   },
 ]

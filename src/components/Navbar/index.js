@@ -36,8 +36,8 @@ function Navbar({ isOnScreen, showNavbar }) {
         <StaticImage
           className={styleLogo}
           src='../../images/ks.png'
-          width={45}
-          height={55}
+          width={80}
+          height={82}
           /* src='../../images/ks1.png'
           width={34}
           height={60} */

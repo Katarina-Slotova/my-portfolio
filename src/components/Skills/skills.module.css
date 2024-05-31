@@ -64,6 +64,10 @@
   margin-bottom: 100px;
 }
 
+ul {
+  padding-left: 0.8rem;
+}
+
 @media (max-width: 1024px) {
   .skills-layout {
     display: block;
