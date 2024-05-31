@@ -211,7 +211,7 @@ function Project({ data, children }) {
           )}
           <div className={redirect}>
             <Link className={subjectLink} href='/#projects'>
-              <FaArrowLeft className={arrow} /> Back
+              <FaArrowLeft className={arrow} /> Back to Projects
             </Link>
           </div>
         </div>

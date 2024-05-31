@@ -85,7 +85,7 @@ export const intro = [
     repoLink: 'https://github.com/Katarina-Slotova/ft_printf-hive',
   },
   {
-    emoji: '📸',
+    emoji: '🔒',
     text: "Camagru is the first website I created from scratch all by myself. \
 		It allows user to create an account, \
 		which is verified via an email with unique link. User can log in, \
@@ -100,9 +100,9 @@ export const intro = [
       'XSS and SQL injction attacks are rather difficult to achieve, since I prevent \
 		all kinds of shenanigans 😁',
     subjectLink:
-      'https://github.com/Katarina-Slotova/Camagru-hive/blob/main/subject.pdf',
+      'https://github.com/Katarina-Slotova/roger-skyline/blob/main/Roger-skyline-1%20Subject.pdf',
     type: 'Solo school project',
-    repoLink: 'https://github.com/Katarina-Slotova/Camagru-hive',
+    repoLink: 'https://github.com/Katarina-Slotova/roger-skyline',
   },
 ]
 
@@ -136,7 +136,7 @@ all while being protected against security vulnerabilities like XSS and SQL inje
     purpose:
       'Ft_printf was the fourth and the last school project I coded in C, before I moved to web development branch.\
 		It was a more advanced one, introducing the concept of variadic functions and ellipsis.',
-    goal: 'My goal was to create a function that replicates the functionality of the stndard printf function. \
+    goal: 'My goal was to create a function that replicates the functionality of the standard printf function. \
 		It had to handle multiple format conversions (single characters, strings, pointers, \
 		signed and unsigned decimal numbers, octal numbers, hexadecimal numbers, floating point numbers),\
 		as well as flags that control how the argument is displayed.',
@@ -267,14 +267,16 @@ export const problems = [
   },
   {
     problems:
-      'The feature that turned out to be particularly problematic was \
-			taking photos using webcam and placing stickers correctly on top of them. I used one HTML canvas tag for this task. \
-			We can think of this canvas tag as an actual canvas in real life - it is a blank space that allows us to draw on it.\
-			 After a few hours of trial-and-error, I solved my problem by using two separate HTML canvases instead of just one - \
-			 one for the photo and the other one for the stickers. Then I was able to place the canvas with the stickers on top of the canvas with the picture.',
+      'The most difficult part of this project was replicating the exact behaviour of printf \
+			when printing floating point numbers, specifically the accuracy of decimal numbers beyond five decimal places. \
+			I also came across several bugs that were difficult to trace at first, because \
+			they originated from my own C library I used in this project. I realized how important \
+			it is to test as many edge cases as possible and make sure the smaller parts of a larger projects work \
+			as intended. This experience helped me to improve the library itself, and also \
+			my testing and debugging skills.',
     thoughts:
-      "While scheduling out the project workload, I realized that if I continued coding in C, \
-			ft_printf would be an invaluable addition to my C library and I would continue \
+      "While scheduling out the project workload, I realized that \
+			ft_printf will be an invaluable addition to my C library and I would continue \
 			extending its functionality for the purpose of future projects. That's why I wanted to keep the \
 			code well-structured and easily maintainable. I decided to code the \
 			conversions that seemed easier first, such as single characters and strings, and work my way \
