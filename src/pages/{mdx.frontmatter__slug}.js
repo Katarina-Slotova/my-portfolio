@@ -137,7 +137,7 @@ function Project({ data, children }) {
             </div>
             <div className={subContainerRight}>
               <h2 className={subheading} style={{ marginTop: '0' }}>
-                Web Stack & Constraints
+                Stack & Constraints
               </h2>
               <p className={about}>
                 {stack[data.mdx.frontmatter.imageId].constraints}
@@ -194,7 +194,7 @@ function Project({ data, children }) {
           </div>
           <div className={twoColumnWrapper}>
             <div className={subContainerLeft}>
-              <h2 className={subheading}>Problems & Thought Process</h2>
+              <h2 className={subheading}>Thought Process & Problems</h2>
               <p className={about}>
                 {problems[data.mdx.frontmatter.imageId].thoughts}
               </p>

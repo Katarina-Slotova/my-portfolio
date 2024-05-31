@@ -87,19 +87,13 @@ export const intro = [
   },
   {
     emoji: '🔒',
-    text: "Camagru is the first website I created from scratch all by myself. \
-		It allows user to create an account, \
-		which is verified via an email with unique link. User can log in, \
-		upload pictures with none, one or more predefined images (stickers), take a \
-		picture using their webcam and jazz it up with one or more stickers, like \
-		pictures and comment on them, edit their profile, and search for other users\
-		 and follow them. Every time someone comments on user's picture, user will \
-		 receive a notification email. User can turn off the notifications in the \
-		 profile settings. The gallery with all the pictures \
-		 is public, so people can see them without creating an account or logging in.",
+    text: 'Roger Skyline was a school project that introduced me to the basics of system and network administration.\
+		I installed a virtual machine (VM), configured a web server on it, protected it from possible denial-of-service (DOS) attacks and port scans, \
+		created a simple website for a Harry Potter-themed candy store and wrote a short script for deployment automation. To complete the project, \
+		I chose to use Debian Linux operating system and VirtualBox hypervisor.',
     subsection:
-      'XSS and SQL injction attacks are rather difficult to achieve, since I prevent \
-		all kinds of shenanigans 😁',
+      "If you are interested in knowing what it takes to complete all the mentioned tasks, have a look at \
+			the detailed step-by-step guide I included in this project's repository!",
     subjectLink:
       'https://github.com/Katarina-Slotova/roger-skyline/blob/main/Roger-skyline-1%20Subject.pdf',
     type: 'Solo school project',
@@ -144,15 +138,13 @@ all while being protected against security vulnerabilities like XSS and SQL inje
   },
   {
     purpose:
-      "Camagru was the first full-stack web development project in my school's curriculum. \
-The challenge was to create a small Instagram-like web application that allows user \
-to edit their photos using their webcam and predifined images.\
- ",
-    goal: "My goal was to create a comprehensive and user-friendly \
-photo-sharing website focused on user's creativity, interaction, and security.\
-It allows users to connect, \
-express themselves visually, and easily manage their profiles, \
-all while being protected against security vulnerabilities like XSS and SQL injection attacks.",
+      "Roger Skyline was the second system and network administration project in my school's curriculum. \
+			It provided an opportunity to put the basic commands I learned while working on the first sysadmin project into practice  \
+			by creating a VM and starting my first web server.",
+    goal: "My goal was to learn basics of network and system administration through a practical, hands-on approach. \
+		I configured a VM and set up a web server available on the VM's IP address. \
+		To complete this task, I installed nginx and replaced the default webiste with one of my own.\
+		I was still learning the web development technologies, so I created a simple website using HTML and CSS.",
   },
 ]
 
@@ -212,18 +204,11 @@ export const stack = [
   },
   {
     constraints:
-      'The choice of technologies used for this project was limited due to mandatory constraints.',
+      "The only technology I used for this project was shell script. I wasn't allowed to use any other technologies, such as Docker, Vagrant, etc.",
     stack:
-      "Exclusively PHP was used to handle server-side logic. \
-			Client-side interactivity was implemented solely using HTML, CSS, and JavaScript. \
-			No frameworks and no libraries were authorized on the server side. \
-			Since JavaScript-free client-side frameworks were allowed, I decided to use Bulma. \
-			I chose MySQL as the database management system. I had no previous hands-on experience with database systems. \
-			MySQL's user-friendly interface and good documentation made it an ideal choice for a beginner, \
-			allowing me to effectively learn and implement database functionalities necessary for the project.",
-    stackImgs: [
-      { src: Shell, alt: 'Shell logo.', name: 'Shell' },
-    ],
+      "According to the project's subject, it was mandatory to create an 8 GB hard disk file during the configuration of the VM.\
+			When partitioning the disk, one of the parts had to be exactly 4.2 GB.",
+    stackImgs: [{ src: Shell, alt: 'Shell logo.', name: 'Shell' }],
   },
 ]
 
@@ -267,7 +252,7 @@ export const problems = [
 			when printing floating point numbers, specifically the accuracy of decimal numbers beyond five decimal places. \
 			I also came across several bugs that were difficult to trace at first, because \
 			they originated from my own C library I used in this project. I realized how important \
-			it is to test as many edge cases as possible and make sure the smaller parts of a larger projects work \
+			it is to try and think of as many edge cases as possible and then test thoroughly to make sure even the smallest parts of a larger project work \
 			as intended. This experience helped me to improve the library itself, and also \
 			my testing and debugging skills.',
     thoughts:
@@ -280,20 +265,27 @@ export const problems = [
   },
   {
     problems:
-      'The feature that turned out to be particularly problematic was \
-			taking photos using webcam and placing stickers correctly on top of them. I used one HTML canvas tag for this task. \
-			We can think of this canvas tag as an actual canvas in real life - it is a blank space that allows us to draw on it.\
-			 After a few hours of trial-and-error, I solved my problem by using two separate HTML canvases instead of just one - \
-			 one for the photo and the other one for the stickers. Then I was able to place the canvas with the stickers on top of the canvas with the picture.',
+      "While setting up the public key connection to the VM, \
+			I managed to lock myself out of the VM permanently.\
+			I hadn't written any notes until then and I didn't exactly remember how I completed all the tasks.\
+			It took a couple of days to look it all up again and recreate everything from scratch.\
+			This time, I decided to write down everything I was doing just in case it happens again - and it sure did!\
+			I managed to lock myself out of the VM on three more occasions while testing the DOS protection.\
+			This was an excellent learning lesson that made me realize the importance of writing a quality documentation\
+			and updating it regularly, ideally while still working on a project.",
     thoughts:
-      'Although this was a school assignment, I approached it as I would a real-life \
-			 project and employed practices aligned with industry standards. The first step was to \
-			 sketch the layout and design of the website. Key UI elements included \
-			 forms for creating new posts and feed to display posts. I aimed for a clean \
-			 and intuitive design inspired by Instagram. \
-			 My development process started with setting up a version control system. \
-			 Then I worked on user authentication and developed key features such as feed, image uploads, likes and comments.\
-			 I implemented validation and error handling to ensure secure file uploads.',
+      "Firstly, I created a non-root user with sudoer rights to connect to the VM. \
+			I had to install sudo because it didn't come pre-installed.\
+			Then I set up a static IP address that I calculated using an online IP calculator. \
+			I used ping command to make extra sure the address is available. Then I \
+			configured the VM so that it's possible to connect to it \
+			only with the public key from the host system instead of a password. Then I set up a firewall, \
+			allowing only SSH, HTTP and HTTPS connections. To protect against DOS attacks, I installed Fail2ban \
+			that blocks IP addresses for a specified amount of time after several failed login attempts. \
+			Next, I wrote a script that updates packages by adding a scheduled task to crontab file and monitors \
+			changes made to the crontab file by sending an email to root. Lastly, I set up an nginx server, \
+			replaced the default website with my candy shop website and wrote a deployment script that \
+			checks for changes in the index.html file, creates a backup and deploys the modified html file. ",
   },
 ]
 
@@ -376,12 +368,3 @@ export const images = [
     images: [],
   },
 ]
-
-/* export const stackCamagru = [
-  { src: PhpImg, alt: 'PHP logo.', name: 'PHP' },
-  { src: HtmlImg, alt: 'Html logo.', name: 'HTML' },
-  { src: CssImg, alt: 'CSS logo.', name: 'CSS' },
-  { src: JsImg, alt: 'JavaScript logo.', name: 'JavaScript' },
-  { src: MysqlImg, alt: 'MySQL logo.', name: 'MySQL' },
-  { src: Bulma, alt: 'Bulma logo.', name: 'Bulma' },
-] */
