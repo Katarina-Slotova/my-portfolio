@@ -18,9 +18,6 @@ button {
 }
 
 .submit-button {
-  /* color: #0802a3; */
-  /* background-color: #e8e8f3; */
-  /* border: 1px solid hsl(240deg 30% 80%); */
   background: hsl(240deg 60% 25%);
   border: none;
   color: white;

@@ -25,12 +25,11 @@ import {
   redirect,
   subContainerStackVisible,
   subContainerStackHidden,
-  hiddenCarousel,
 } from './page.module.css'
 import { intro, purpose, stack, images, problems } from '../data/data.js'
 import { FaArrowRight, FaArrowLeft } from 'react-icons/fa'
 
-function Project({ data, children }) {
+function Project({ data }) {
   const image = getImage(data.mdx.frontmatter.intro_img)
   console.log(images[data.mdx.frontmatter.imageId].images)
 
@@ -219,12 +218,6 @@ function Project({ data, children }) {
     </App>
   )
 }
-
-/* className={`${
-              images[data.mdx.frontmatter.imageId].images.length === 0
-                ? console.log('hidden')
-                : console.log('not hidden')
-            }`} */
 
 export const projectData = graphql`
   query ($id: String) {

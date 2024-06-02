@@ -19,14 +19,13 @@
 }
 
 .profile-img {
-  scale: 0.6;
-  border-radius: 10px;
-  position: absolute;
+  scale: 0.6 !important;
+  border-radius: 10px !important;
+  position: absolute !important;
 }
 
 .background-container {
   background-color: rgb(204, 204, 218);
-  /* background-color: #dcb3bc; */
   height: 550px;
   width: 300px;
   margin-left: 50px;
@@ -75,11 +74,6 @@
     rgba(232, 232, 243, 1) 0%,
     rgba(202, 202, 219, 1) 50%
   );
-  /* background-color: #e8e8f3; */
-}
-
-.profile-img-mobile {
-  display: none;
 }
 
 .intro-text {
@@ -95,7 +89,6 @@
   margin-top: 50px;
   line-height: 25px;
   margin-left: 30px;
-  /* padding-left: 20px; */
   border-radius: 10px;
 }
 
@@ -111,6 +104,10 @@
 .intro-about-me {
   text-align: justify;
   font-size: 18px;
+}
+
+.profile-img-mobile {
+  display: none !important;
 }
 
 @media (min-width: 1500px) {
@@ -137,11 +134,10 @@
   }
 
   .profile-img-mobile {
-    display: flex;
-    scale: 1.2;
-    border-radius: 10%;
-    margin-left: 0;
-    z-index: 2;
+    display: flex !important;
+    border-radius: 10% !important;
+    margin-left: 0 !important;
+    z-index: 2 !important;
   }
 
   .large-circle {
@@ -156,7 +152,7 @@
     display: none;
   }
 
-  .about {
+   .about {
     display: block;
     margin: 0 2rem;
     padding: 0;

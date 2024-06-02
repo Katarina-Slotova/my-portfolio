@@ -115,7 +115,8 @@
     font-size: 20px;
   }
 
-  .arrow, .project-tag {
+  .arrow,
+  .project-tag {
     font-size: 16px;
   }
 
@@ -142,14 +143,15 @@
     padding: 1px 10px 10px 10px;
   }
 
-	.description,
+  .description,
   .redirect-link,
   .github-link,
   .card {
     font-size: 16px;
   }
 
-  .arrow, .project-tag {
+  .arrow,
+  .project-tag {
     font-size: 12px;
   }
 

@@ -38,9 +38,6 @@ function Navbar({ isOnScreen, showNavbar }) {
           src='../../images/ks.png'
           width={80}
           height={82}
-          /* src='../../images/ks1.png'
-          width={34}
-          height={60} */
           alt='website logo'
         />
       </Link>
@@ -78,7 +75,7 @@ function Navbar({ isOnScreen, showNavbar }) {
             className={menu}
             style={{ paddingTop: '20px' }}
           >
-            <MdClose size={30} />
+            <MdClose size={30} />{''}
           </button>
         </li>
         <li className={sidebarNavItem}>
@@ -167,7 +164,7 @@ function Navbar({ isOnScreen, showNavbar }) {
           </li>
           <li>
             <button onClick={showSidebar} className={menu}>
-              <FaBars size={24} />
+              <FaBars size={24} />{''}
             </button>
           </li>
         </ul>

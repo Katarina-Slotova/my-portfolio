@@ -16,6 +16,7 @@
   },
   "dependencies": {
     "@mdx-js/react": "^2.3.0",
+    "babel-plugin-styled-components": "^2.1.4",
     "framer-motion": "^11.0.25",
     "gatsby": "^5.13.3",
     "gatsby-plugin-google-fonts": "^1.0.1",
@@ -25,11 +26,13 @@
     "gatsby-plugin-netlify": "^5.1.1",
     "gatsby-plugin-prefetch-google-fonts": "^1.4.3",
     "gatsby-plugin-sharp": "^5.13.1",
+    "gatsby-plugin-styled-components": "^6.13.1",
     "gatsby-source-filesystem": "^5.13.1",
     "gatsby-transformer-sharp": "^5.13.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^5.1.0",
+    "styled-components": "^6.1.11",
     "webpack": "^5.91.0"
   }
 }
