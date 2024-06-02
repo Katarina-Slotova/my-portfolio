@@ -3,9 +3,7 @@ import {
   container,
   formContainer,
   textContainer,
-	textWrapper,
-  wrapper,
-  submitButton,
+  textWrapper,
   textSubsection,
   textParagraph,
   connectImg,
@@ -14,9 +12,9 @@ import {
   emailBtn,
   connectSubsection,
 } from './contact.module.css'
-import { motion } from 'framer-motion'
 import GithubImg from '../../images/github.png'
 import LinkedInImg from '../../images/linkedin.png'
+import ContactForm from '../ContactForm'
 
 function Contact() {
   return (
@@ -82,9 +80,9 @@ function Contact() {
               <button className={emailBtn}>
                 <a
                   className={emailLink}
-                  href='mailto:katarina.slotova@gmail.com'
+                  href='mailto:katarina.slotova.ca@gmail.com'
                 >
-                  katarina.slotova@gmail.com
+                  katarina.slotova.ca@gmail.com
                 </a>
               </button>
             </div>
@@ -92,48 +90,7 @@ function Contact() {
         </div>
       </div>
       <div className={formContainer}>
-        <form
-          className={wrapper}
-          method='post'
-          netlify-honeypot='bot-field'
-          data-netlify='true'
-          name='contact'
-        >
-          <input type='hidden' name='bot-field' />
-          <input type='hidden' name='form-name' value='contact' />
-          <input
-            type='text'
-            name='name'
-            id='name'
-            placeholder='Your name'
-            required
-          ></input>
-          <input
-            type='email'
-            name='email'
-            id='email'
-            placeholder='Your email'
-            required
-          ></input>
-          <textarea
-            type='text'
-            name='message'
-            id='message'
-            rows={7}
-            placeholder='Message'
-            required
-          ></textarea>
-          <motion.button
-            className={submitButton}
-            type='submit'
-            whileHover={{
-              scale: 1.02,
-            }}
-            transition={{ type: 'spring', stiffness: 900, damping: 90 }}
-          >
-            Submit
-          </motion.button>
-        </form>
+        <ContactForm />
       </div>
     </div>
   )

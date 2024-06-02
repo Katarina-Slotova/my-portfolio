@@ -1,0 +1,57 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+}
+
+input,
+textarea,
+button {
+  font-family: 'League Spartan';
+  font-size: 16px;
+  display: block;
+  margin-bottom: 16px;
+  padding: 4px 8px;
+  line-height: 30px;
+  border-radius: 6px;
+  border: 1px solid rgb(162, 162, 162);
+}
+
+.submit-button {
+  /* color: #0802a3; */
+  /* background-color: #e8e8f3; */
+  /* border: 1px solid hsl(240deg 30% 80%); */
+  background: hsl(240deg 60% 25%);
+  border: none;
+  color: white;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.submit-button:hover {
+  background: #db3056;
+}
+
+@media (max-width: 1024px) {
+  .wrapper {
+    width: 90%;
+  }
+
+  input,
+  textarea,
+  button {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 700px) {
+  .wrapper {
+    width: 90%;
+  }
+
+  input,
+  textarea,
+  button {
+    font-size: 18px;
+  }
+}
