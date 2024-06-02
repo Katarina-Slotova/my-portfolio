@@ -143,6 +143,12 @@
   visibility: hidden;
 }
 
+.message {
+  display: block;
+  text-align: center;
+  margin: 100px 20px 0 20px;
+}
+
 @media (min-width: 1500px) {
   .narrow-container {
     margin-left: 100px;

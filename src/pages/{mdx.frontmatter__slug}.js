@@ -31,7 +31,6 @@ import { FaArrowRight, FaArrowLeft } from 'react-icons/fa'
 
 function Project({ data }) {
   const image = getImage(data.mdx.frontmatter.intro_img)
-  console.log(images[data.mdx.frontmatter.imageId].images)
 
   return (
     <App>

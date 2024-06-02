@@ -152,7 +152,7 @@
     display: none;
   }
 
-   .about {
+  .about {
     display: block;
     margin: 0 2rem;
     padding: 0;
@@ -201,6 +201,7 @@
     border-radius: 10%;
     margin-left: 0;
     z-index: 2;
+    margin-top: 4rem;
   }
 
   .large-circle {

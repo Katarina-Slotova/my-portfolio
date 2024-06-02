@@ -11,6 +11,8 @@ function ContactForm() {
       data-netlify='true'
       name='contact'
       onSubmit='submit'
+      action='/success/'
+      netlify
     >
       <input type='hidden' name='bot-field' />
       <input type='hidden' name='form-name' value='contact' />

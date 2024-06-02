@@ -62,7 +62,6 @@ const IndexPage = ({ data }) => {
           className={container}
           style={{
             backgroundColor: '#e8e8f3',
-            /* marginBottom: '0', */
           }}
         >
           <h1 style={{ margin: '0' }}>{}</h1>

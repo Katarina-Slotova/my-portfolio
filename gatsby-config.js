@@ -26,11 +26,7 @@ module.exports = {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
         fonts: [
-          `quattrocento sans`,
-          `satisfy`,
           `playfair display`,
-          `raleway`,
-          `alegreya sans`,
           `league spartan\:300,400,500,600,700`,
           `reenie beanie`,
         ],
