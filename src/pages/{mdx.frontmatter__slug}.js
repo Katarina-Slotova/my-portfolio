@@ -49,10 +49,12 @@ function Project({ data }) {
                 {intro[data.mdx.frontmatter.imageId].subsection}
               </p>
               <p className={about}>
-                For more information about this project, check out the{' '}
+                For more information about this project, check out the project's{' '}
                 <a
                   className={subjectLink}
                   href={intro[data.mdx.frontmatter.imageId].subjectLink}
+                  target='_blank'
+                  rel='noreferrer'
                 >
                   subject.
                 </a>
@@ -137,9 +139,19 @@ function Project({ data }) {
               <h2 className={subheading} style={{ marginTop: '0' }}>
                 Stack & Constraints
               </h2>
-              <p className={about}>
-                {stack[data.mdx.frontmatter.imageId].constraints}
-              </p>
+              {data.mdx.frontmatter.imageId === 2 ? (
+                <p className={about}>
+                  The only language allowed for this project was C. I was not
+                  allowed to use the official C library, except of four
+                  functions: <code>write</code>, <code>malloc</code>,{' '}
+                  <code>free</code> and <code>exit</code>. If I needed any other
+                  function, I had to code it myself.
+                </p>
+              ) : (
+                <p className={about}>
+                  {stack[data.mdx.frontmatter.imageId].constraints}
+                </p>
+              )}
               <p className={about}>
                 {stack[data.mdx.frontmatter.imageId].stack}
               </p>

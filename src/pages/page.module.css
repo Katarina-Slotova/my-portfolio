@@ -149,6 +149,11 @@
   margin: 100px 20px 0 20px;
 }
 
+code {
+  font-size: 14px;
+  color: #db3056;
+}
+
 @media (min-width: 1500px) {
   .narrow-container {
     margin-left: 100px;

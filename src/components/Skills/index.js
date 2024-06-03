@@ -97,7 +97,8 @@ function Skills() {
                 Full Stack Open
               </a>{' '}
               course, as well as exploring the underlying functions of the web,
-              computer communication, and the fundamentals of web hacking via{' '}
+              computer communication, and the fundamentals of ethical web
+              hacking via{' '}
               <a
                 className={redirectLink}
                 href='https://tryhackme.com/'
@@ -112,9 +113,9 @@ function Skills() {
           <div className={subsection}>
             <h3 className={smallHeading}>Volunteering</h3>
             <ul>
-              <li>Junction 2022 (Sustainability Team member)</li>
+              <li>Junction Hackathon 2022 (Sustainability Team member)</li>
               <li>
-                React Finland 2022 (stage operations, general support for
+                React Finland Conference 2022 (stage operations, general support for
                 participants and partners)
               </li>
               <li>
