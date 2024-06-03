@@ -44,11 +44,11 @@
 }
 
 .project-thumbnail {
-  border-radius: 10px;
-  margin-top: 10px;
-  display: flex;
-  justify-content: center;
-  min-height: 200px;
+  border-radius: 10px !important;
+  margin-top: 10px !important;
+  display: flex !important;
+  justify-content: center !important;
+  min-height: 200px !important;
 }
 
 .redirect-link {
@@ -121,7 +121,7 @@
   }
 
   .project-thumbnail {
-    height: 310px;
+    height: 310px !important;
   }
 
   .github-container {
@@ -156,7 +156,7 @@
   }
 
   .project-thumbnail {
-    height: 210px;
+    height: 210px !important;
   }
 
   .github-container {

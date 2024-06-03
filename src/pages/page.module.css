@@ -167,7 +167,7 @@
 
   .section-heading {
     font-size: 50px;
-    margin: 3rem 0;
+    margin: 3rem 0 !important;
     padding: 0;
   }
 }
@@ -222,7 +222,7 @@
   }
 
   .section-heading {
-    font-size: 35px;
+    font-size: 30px;
     margin: 3rem 0;
     padding: 0;
   }

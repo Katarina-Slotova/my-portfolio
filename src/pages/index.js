@@ -27,13 +27,6 @@ const IndexPage = ({ data }) => {
     isFourthOnScreen,
   ]
 
-  /*    isOnScreen.map((section, id) => {
-    if (section && isOnScreen.indexOf(section) === id) {
-      const sectionId = id + 1
-      document.location.replace(`#section${sectionId}`)
-    }
-  })  */
-
   return (
     <App>
       <Layout isOnScreen={isOnScreen}>
