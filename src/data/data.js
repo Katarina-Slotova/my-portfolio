@@ -139,7 +139,7 @@ export const stack = [
 export const problems = [
   {
     problems:
-      'The main issues we encountered during this project were due to lack of frequent updates and communication among us as team members. This led to problems when merging our individual contrubitions of the project we each worked on separately, causing integration challenges and conflicts. This helped us realize the importance of regular updates and close collaboration, as well as improved our teamwork and other soft skills.',
+      'The main issues we encountered during this project were due to lack of frequent updates and communication among us as team members. This led to problems when merging our individual contributions of the project we each worked on separately, causing integration challenges and conflicts. This helped us realize the importance of regular updates and close collaboration, as well as improved our teamwork and other soft skills.',
     thoughts:
       'Just as with other school assignments, I approached Matcha as I would a real-life team project and employed practices aligned with industry standards. The first step was to summarize the workload and equally divide the tasks. We used Trello app in order to keep each other updated, and Github for version control. We prepared a basic layout and design of the website together, then worked on our respective tasks, while keeping each other updated about the progress and problems we encountered.',
   },
