@@ -87,18 +87,28 @@ function Skills() {
               .
             </p>
             <p>
-              I'm currently learning TypeScript through University of Helsinki's{' '}
+              {/* I'm currently learning TypeScript through University of Helsinki's{' '}
               <a
                 className={redirectLink}
                 href='https://fullstackopen.com/en/part9'
                 target='_blank'
                 rel='noreferrer'
               >
-                Full Stack Open
+                Full Stack Open course
+              </a>{' '} */}
+              I'm currently participating in the{' '}
+              <a
+                className={redirectLink}
+                href='https://accesemployment.ca/programs/programs-for-women/women-in-technology'
+                target='_blank'
+                rel='noreferrer'
+              >
+                Women in Technology
               </a>{' '}
-              course, as well as exploring the underlying functions of the web,
-              computer communication, and the fundamentals of ethical web
-              hacking via{' '}
+              program, one of the employment programs offered by ACCES
+              Employment, where I'm enhancing my skills by learning Java. I'm
+              also exploring the underlying functions of the web, computer
+              communication, and the fundamentals of ethical web hacking via{' '}
               <a
                 className={redirectLink}
                 href='https://tryhackme.com/'
@@ -115,8 +125,8 @@ function Skills() {
             <ul>
               <li>Junction Hackathon 2022 (Sustainability Team member)</li>
               <li>
-                React Finland Conference 2022 (stage operations, general support for
-                participants and partners)
+                React Finland Conference 2022 (stage operations, general support
+                for participants and partners)
               </li>
               <li>
                 Finnish Model United Nations 2017 (Head of the Sustainability,
