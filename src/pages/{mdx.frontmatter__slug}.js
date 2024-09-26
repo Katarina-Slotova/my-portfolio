@@ -56,7 +56,7 @@ function Project({ data }) {
                   target='_blank'
                   rel='noreferrer'
                 >
-                  subject.
+                  assignment.
                 </a>
               </p>
             </div>
