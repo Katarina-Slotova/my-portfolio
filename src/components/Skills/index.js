@@ -96,7 +96,7 @@ function Skills() {
               >
                 Full Stack Open course
               </a>{' '} */}
-              I'm currently participating in the{' '}
+              I recently completed the{' '}
               <a
                 className={redirectLink}
                 href='https://accesemployment.ca/programs/programs-for-women/women-in-technology'
@@ -105,10 +105,12 @@ function Skills() {
               >
                 Women in Technology
               </a>{' '}
-              program, one of the employment programs offered by ACCES
-              Employment, where I'm enhancing my skills by learning Java. I'm
-              also exploring the underlying functions of the web, computer
-              communication, and the fundamentals of ethical web hacking via{' '}
+              program, an employment program offered by ACCES Employment. During
+              the program, I enhanced my skills and began learning Java, a
+              journey I'm continuing as I expand my expertise in web
+              development. I'm also exploring the underlying functions of the
+              web, computer communication, and the fundamentals of ethical web
+              hacking via{' '}
               <a
                 className={redirectLink}
                 href='https://tryhackme.com/'
