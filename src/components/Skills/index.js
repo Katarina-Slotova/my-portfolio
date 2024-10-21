@@ -125,6 +125,7 @@ function Skills() {
           <div className={subsection}>
             <h3 className={smallHeading}>Volunteering</h3>
             <ul>
+              <li>TCS Toronto Waterfront Marathon 2024 (Course Marshal)</li>
               <li>Junction Hackathon 2022 (Sustainability Team member)</li>
               <li>
                 React Finland Conference 2022 (stage operations, general support
